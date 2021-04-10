@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImagesController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,8 +14,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*
+|--------------------------------------------------------------------------
+| Articles Routes
+|--------------------------------------------------------------------------
+*/
 
 
+
+
+/*
+|--------------------------------------------------------------------------
+| Images Routes
+|--------------------------------------------------------------------------
+*/
+Route::post('/images', [ImagesController::class, 'store']);
 
 require __DIR__ . '/auth.php';
 
