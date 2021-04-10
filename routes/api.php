@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ImagesController;
+use App\Http\Controllers\MetaController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,9 +17,10 @@ use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
-| Articles Routes
+| Meta Routes
 |--------------------------------------------------------------------------
 */
+Route::apiResource('meta', MetaController::class);
 
 
 
