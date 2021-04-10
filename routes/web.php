@@ -17,4 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-require __DIR__ . '/auth.php';
+
+Route::fallback(function () {
+   return response()->json([
+       'success' => false,
+       'message' => 'Not Found'
+   ], 404);
+});
