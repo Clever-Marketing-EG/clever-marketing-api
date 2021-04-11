@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 | Meta Routes
 |--------------------------------------------------------------------------
 */
-Route::apiResource('meta', MetaController::class);
+Route::apiResource('meta', MetaController::class)->only(['index', 'update']);
 
 
 
@@ -30,7 +30,7 @@ Route::apiResource('meta', MetaController::class);
 | Images Routes
 |--------------------------------------------------------------------------
 */
-Route::post('/images', [ImagesController::class, 'store']);
+Route::post('/images', [ImagesController::class, 'store'])->name('images.store');
 
 require __DIR__ . '/auth.php';
 
