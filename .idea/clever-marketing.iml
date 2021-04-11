@@ -119,6 +119,14 @@
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-php80" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/symfony/polyfill-intl-normalizer" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/.idea/dataSources" />
+      <excludeFolder url="file://$MODULE_DIR$/public/storage" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/app/public/images" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/52" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/70" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/c0" />
+      <excludeFolder url="file://$MODULE_DIR$/storage/framework/cache/data/ec" />
+      <excludeFolder url="file://$MODULE_DIR$/vendor" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
