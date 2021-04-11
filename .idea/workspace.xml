@@ -2,19 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bd6407a-62d7-4535-977d-c25a0805bf64" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MetaController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Middleware/Localization.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Meta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/MetaFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_10_143208_create_metas_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/MetaSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/meta.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImagesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ImagesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Kernel.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -190,7 +179,8 @@
       <option name="presentableId" value="Default" />
       <updated>1618054054605</updated>
       <workItem from="1618054063754" duration="275000" />
-      <workItem from="1618054367931" duration="14427000" />
+      <workItem from="1618054367931" duration="14477000" />
+      <workItem from="1618134766710" duration="59000" />
     </task>
     <servers />
   </component>
