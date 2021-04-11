@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ImagesController;
+use App\Http\Controllers\MailsController;
 use App\Http\Controllers\MetaController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,9 +33,18 @@ Route::apiResource('meta', MetaController::class)->only(['index', 'update']);
 */
 Route::post('/images', [ImagesController::class, 'store'])->name('images.store');
 
+
+/*
+|--------------------------------------------------------------------------
+| Mail Routes
+|--------------------------------------------------------------------------
+*/
+Route::post('/mails/contact-us', [MailsController::class, 'contactUs'])->name('mails.contact');
+
+
+
+/*--------------------------------------------------------------------------*/
 require __DIR__ . '/auth.php';
-
-
 Route::fallback(function () {
     return response()->json([
         'success' => false,
