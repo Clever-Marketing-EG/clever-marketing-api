@@ -7,6 +7,7 @@ use App\Http\Controllers\MemberController;
 use App\Http\Controllers\MetaController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
+use App\Http\Controllers\ArticleController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,6 +51,14 @@ Route::apiResource('jobs', JobController::class);
 |--------------------------------------------------------------------------
 */
 Route::apiResource('services', ServiceController::class);
+
+
+/*
+|--------------------------------------------------------------------------
+| Articles Routes
+|--------------------------------------------------------------------------
+*/
+Route::apiResource('articles', ArticleController::class);
 
 
 
