@@ -19,12 +19,13 @@ class JobFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
             'title' => $this->faker->jobTitle,
             'description' => [$this->faker->sentence, $this->faker->sentence, $this->faker->sentence],
-            'requirements' => [$this->faker->sentence, $this->faker->sentence, $this->faker->sentence]
+            'requirements' => [$this->faker->sentence, $this->faker->sentence, $this->faker->sentence],
+            'image_url' => $this->faker->imageUrl()
         ];
     }
 }

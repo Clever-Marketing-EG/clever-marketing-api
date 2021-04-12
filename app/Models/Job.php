@@ -33,7 +33,8 @@ class Job extends Model
             'description' => 'required|array|min:1',
             'description.*' => 'required|string|distinct|min:3',
             'requirements' => 'required|array|min:1',
-            'requirements.*' => 'required|string|distinct|min:3'
+            'requirements.*' => 'required|string|distinct|min:3',
+            'image_url' => 'required|url'
         ]);
     }
 }
