@@ -17,7 +17,10 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             MetaSeeder::class,
             ServiceSeeder::class,
-            MemberSeeder::class
+            MemberSeeder::class,
+            JobSeeder::class,
+            ProjectSeeder::class,
+            ArticleSeeder::class
         ]);
     }
 }

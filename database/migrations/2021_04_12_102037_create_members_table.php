@@ -23,6 +23,7 @@ class CreateMembersTable extends Migration
             $table->text('profile_ar')->nullable();
             $table->string('facebook');
             $table->string('linkedin');
+            $table->string('image_url');
         });
     }
 

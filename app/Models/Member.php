@@ -28,9 +28,10 @@ class Member extends Model
                 'profile' => $this['profile_ar'],
                 'facebook' => $this['facebook'],
                 'linkedin' => $this['linkedin'],
+                'image_url' => $this['image_url']
             ];
         } else {
-            return $this->only('id', 'name', 'job', 'profile', 'facebook', 'linkedin');
+            return $this->only('id', 'name', 'job', 'profile', 'facebook', 'linkedin', 'image_url');
         }
 
     }
@@ -51,13 +52,14 @@ class Member extends Model
             'profile_ar' => 'string|min:3',
             'facebook' => 'required|string|url|min:3',
             'linkedin' => 'required|string|url|min:3',
+            'image_url' => 'required|url'
         ]);
     }
 
 
     public static function loadEnglish()
     {
-        return Member::select('id', 'name', 'job', 'profile', 'facebook', 'linkedin')
+        return Member::select('id', 'name', 'job', 'profile', 'facebook', 'linkedin', 'image_url')
             ->get()
             ->toArray();
     }
@@ -65,7 +67,7 @@ class Member extends Model
 
     public static function loadArabic()
     {
-        return Member::select('id', 'name_ar as name', 'job_ar as job', 'profile_ar as profile', 'facebook', 'linkedin')
+        return Member::select('id', 'name_ar as name', 'job_ar as job', 'profile_ar as profile', 'facebook', 'linkedin', 'image_url')
             ->get()
             ->toArray();
     }
