@@ -2,4 +2,4 @@
 
 use App\Models\Meta;
 
-return Meta::loadEnglishMeta();
+return Meta::loadEnglish();

@@ -2,16 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1bd6407a-62d7-4535-977d-c25a0805bf64" name="Default Changelist" comment="final commit">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Service.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ServiceFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_11_125155_create_services_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/ServiceSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/ar/services.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/lang/en/services.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Member.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/MemberFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_12_102037_create_members_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/MemberSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/members.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/members.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Service.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Service.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/meta.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -25,7 +29,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="staging" />
+        <entry key="$PROJECT_DIR$" value="boiler-plate" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -195,6 +199,7 @@
       <workItem from="1618054367931" duration="14477000" />
       <workItem from="1618134766710" duration="718000" />
       <workItem from="1618152496018" duration="8755000" />
+      <workItem from="1618219322880" duration="4982000" />
     </task>
     <task id="LOCAL-00001" summary="final commit">
       <created>1618138010770</created>

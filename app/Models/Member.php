@@ -2,26 +2,21 @@
 
 namespace App\Models;
 
-use Illuminate\Http\Request;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
-class Service extends Model
+class Member extends Model
 {
     use HasFactory;
-    protected $guarded = [];
-
-
-    protected $casts = [
-        'points' => 'array',
-        'points_ar' => 'array'
-    ];
 
     public $timestamps = false;
 
+    protected $guarded = [];
+
     /**
-     * Load Service by language
+     * Load Member by language
      */
     public function loadLocale(): array
     {
@@ -29,11 +24,13 @@ class Service extends Model
             return [
                 'id' => $this['id'],
                 'name' => $this['name_ar'],
-                'description' => $this['description_ar'],
-                'points' => $this['points_ar']
+                'job' => $this['job_ar'],
+                'profile' => $this['profile_ar'],
+                'facebook' => $this['facebook'],
+                'linkedin' => $this['linkedin'],
             ];
         } else {
-            return $this->only('id', 'name', 'description', 'points');
+            return $this->only('id', 'name', 'job', 'profile', 'facebook', 'linkedin');
         }
 
     }
@@ -57,18 +54,19 @@ class Service extends Model
         ]);
     }
 
+
     public static function loadEnglish()
     {
-        return Service::select('id', 'name', 'description', 'points')
+        return Service::select('id', 'name', 'job', 'profile', 'facebook', 'linkedin')
             ->get()
             ->toArray();
     }
+
 
     public static function loadArabic()
     {
-        return Service::select('id', 'name_ar as name', 'description_ar as description', 'points_ar as points')
+        return Service::select('id', 'name_ar as name', 'job_ar as job', 'profile_ar as profile', 'facebook', 'linkedin')
             ->get()
             ->toArray();
     }
-
 }

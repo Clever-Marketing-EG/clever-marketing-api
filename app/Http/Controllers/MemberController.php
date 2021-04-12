@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Service;
+use App\Models\Member;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class ServiceController extends ResourcesController
+class MemberController extends ResourcesController
 {
     /**
      * Display a listing of the resource.
@@ -16,11 +16,11 @@ class ServiceController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        $services = trans('services');
+        $members = trans('members');
 
         return response()->json([
             'success' => true,
-            'data' => $services
+            'data' => $members,
         ]);
     }
 
@@ -32,25 +32,26 @@ class ServiceController extends ResourcesController
      */
     public function store(Request $request): JsonResponse
     {
-        $validated = Service::validate($request);
-        $service = Service::create($validated);
+        $validated = Member::validate($request);
+        $member = Member::create($validated);
+
         return response()->json([
             'success' => true,
-            'data' => $service
+            'data' => $member,
         ], 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param Service $service
+     * @param Member $member
      * @return JsonResponse
      */
-    public function show(Service $service): JsonResponse
+    public function show(Member $member): JsonResponse
     {
         return response()->json([
             'success' => true,
-            'data' => $service->loadLocale()
+            'data' => $member->loadLocale()
         ]);
     }
 
@@ -58,34 +59,34 @@ class ServiceController extends ResourcesController
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param Service $service
+     * @param Member $member
      * @return JsonResponse
      */
-    public function update(Request $request, Service $service): JsonResponse
+    public function update(Request $request, Member $member): JsonResponse
     {
-        $validated = Service::validate($request);
-        $service->update($validated);
+        $validated = Member::validate($request);
+        $member->update($validated);
 
         return response()->json([
             'success' => true,
-            'data' => $service
+            'data' => $member
         ]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param Service $service
+     * @param Member $member
      * @return JsonResponse
      * @throws Exception
      */
-    public function destroy(Service $service): JsonResponse
+    public function destroy(Member $member): JsonResponse
     {
-        $service->delete();
+        $member->delete();
 
         return response()->json([
             'success' => true,
-            'data' => $service,
+            'data' => $member,
         ]);
     }
 }

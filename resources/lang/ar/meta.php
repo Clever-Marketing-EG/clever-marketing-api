@@ -2,4 +2,4 @@
 
 use App\Models\Meta;
 
-return Meta::loadArabicMeta();
+return Meta::loadArabic();
