@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\MailsController;
+use App\Http\Controllers\MemberController;
 use App\Http\Controllers\MetaController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +17,15 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+/*
+|--------------------------------------------------------------------------
+| Members Routes
+|--------------------------------------------------------------------------
+*/
+Route::apiResource('members', MemberController::class);
+
+
 
 /*
 |--------------------------------------------------------------------------

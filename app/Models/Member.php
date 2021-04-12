@@ -45,19 +45,19 @@ class Member extends Model
         return $request->validate([
             'name' => 'required|string|min:3',
             'name_ar' => 'required|string|min:3',
-            'description' => 'required|string|min:3',
-            'description_ar' => 'required|string|min:3',
-            'points' => 'required|array|min:1',
-            'points.*' => ['required', 'string', 'distinct', 'min:3'],
-            'points_ar' => 'required|array|min:1',
-            'points_ar.*' => ['required', 'string', 'distinct', 'min:3'],
+            'job' => 'required|string|min:3',
+            'job_ar' => 'required|string|min:3',
+            'profile' => 'string|min:3',
+            'profile_ar' => 'string|min:3',
+            'facebook' => 'required|string|url|min:3',
+            'linkedin' => 'required|string|url|min:3',
         ]);
     }
 
 
     public static function loadEnglish()
     {
-        return Service::select('id', 'name', 'job', 'profile', 'facebook', 'linkedin')
+        return Member::select('id', 'name', 'job', 'profile', 'facebook', 'linkedin')
             ->get()
             ->toArray();
     }
@@ -65,7 +65,7 @@ class Member extends Model
 
     public static function loadArabic()
     {
-        return Service::select('id', 'name_ar as name', 'job_ar as job', 'profile_ar as profile', 'facebook', 'linkedin')
+        return Member::select('id', 'name_ar as name', 'job_ar as job', 'profile_ar as profile', 'facebook', 'linkedin')
             ->get()
             ->toArray();
     }
