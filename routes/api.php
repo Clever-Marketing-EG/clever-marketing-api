@@ -5,6 +5,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\MailsController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\MetaController;
+use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -25,6 +26,14 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::apiResource('members', MemberController::class);
+
+
+/*
+|--------------------------------------------------------------------------
+| Members Routes
+|--------------------------------------------------------------------------
+*/
+Route::apiResource('projects', ProjectController::class);
 
 
 /*

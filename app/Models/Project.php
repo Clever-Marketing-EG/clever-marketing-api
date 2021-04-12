@@ -10,6 +10,14 @@ class Project extends Model
 {
     use HasFactory;
 
+    protected $guarded = [];
+
+    protected $casts = [
+        'created_at' => 'datetime:d M Y',
+        'updated_at' => 'datetime:d M Y'
+    ];
+
+
     /**
      * Validate Project instance
      *
