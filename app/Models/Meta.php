@@ -9,14 +9,7 @@ class Meta extends Model
 {
     use HasFactory;
 
-    protected $fillable = [
-        'position',
-        'name',
-        'content',
-        'content_ar',
-        'type',
-        'page'
-    ];
+    protected $guarded = [];
 
     public $timestamps = false;
 
@@ -26,7 +19,7 @@ class Meta extends Model
      *
      * @return mixed
      */
-    public static function loadEnglishMeta()
+    public static function loadEnglish()
     {
         return Meta::select('position', 'name', 'content', 'type', 'page')
             ->get()
@@ -49,7 +42,7 @@ class Meta extends Model
      *
      * @return mixed
      */
-    public static function loadArabicMeta()
+    public static function loadArabic()
     {
         return Meta::select('position', 'name', 'content_ar', 'type', 'page')
             ->get()
