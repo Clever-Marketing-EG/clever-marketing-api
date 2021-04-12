@@ -16,6 +16,7 @@ class ArticleController extends ResourcesController
     public function index(): JsonResponse
     {
         $articles = trans('articles');
+
         return response()->json([
             'success' => true,
             'data' => $articles
@@ -32,6 +33,7 @@ class ArticleController extends ResourcesController
     {
         $validated = Article::validate($request);
         $article = Article::create($validated);
+        
         return response()->json([
             'success' => true,
             'data' => $article

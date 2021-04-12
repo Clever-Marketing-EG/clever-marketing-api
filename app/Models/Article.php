@@ -26,12 +26,15 @@ class Article extends Model
                 'title' => $this['title_ar'],
                 'content' => $this['content_ar'],
                 'note' => $this['note_ar'],
-                'image_url' => $this['image_url']
+                'image_url' => $this['image_url'],
+                'created_at' => $this['created_at']
             ];
         } else {
-            return $this->only('id', 'title', 'content', 'note', 'image_url');
+            return $this->only('id', 'title', 'content', 'note', 'image_url', 'created_at');
         }
     }
+
+
     /**
      * Validate Article instance
      * @param Request $request
@@ -44,20 +47,20 @@ class Article extends Model
             'title_ar' => 'required|string|min:3',
             'content' => 'required|string|min:3',
             'content_ar' => 'required|string|min:3',
-            'note' => 'nullable|string|min:3',
-            'note_ar' => 'nullable|string|min:3',
+            'note' => 'string|min:3',
+            'note_ar' => 'string|min:3',
             'image_url' => 'required|url'
         ]);
     }
 
     public static function loadEnglish(){
-        return Article::select('id', 'title', 'content', 'note', 'image_url')
+        return Article::select('id', 'title', 'content', 'note', 'image_url', 'created_at')
         ->get()
         ->toArray();
 
     }
     public static function loadArabic(){
-        return Article::select('id', 'title_ar as title', 'content_ar as content', 'note_ar as note', 'image_url')
+        return Article::select('id', 'title_ar as title', 'content_ar as content', 'note_ar as note', 'image_url', 'created_at')
         ->get()
         ->toArray();
     }

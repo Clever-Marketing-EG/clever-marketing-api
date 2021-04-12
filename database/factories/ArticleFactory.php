@@ -19,14 +19,16 @@ class ArticleFactory extends Factory
      *
      * @return array
      */
-    public function definition()
+    public function definition(): array
     {
         return [
             'title' => $this->faker->sentence,
             'title_ar' => $this->faker->sentence,
             'content' => $this->faker->text,
             'content_ar' => $this->faker->text,
-            'image_url' => $this->faker->imageUrl()
+            'note' => rand(0,1) === 1? $this->faker->text : '',
+            'note_ar' => rand(0,1) === 1? $this->faker->text : '',
+            'image_url' => $this->faker->imageUrl(),
         ];
     }
 }
