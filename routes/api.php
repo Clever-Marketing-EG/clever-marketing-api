@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ImagesController;
+use App\Http\Controllers\JobController;
 use App\Http\Controllers\MailsController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\MetaController;
@@ -25,6 +26,13 @@ use Illuminate\Support\Facades\Route;
 */
 Route::apiResource('members', MemberController::class);
 
+
+/*
+|--------------------------------------------------------------------------
+| Jobs Routes
+|--------------------------------------------------------------------------
+*/
+Route::apiResource('jobs', JobController::class);
 
 
 /*
