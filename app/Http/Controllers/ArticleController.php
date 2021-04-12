@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -33,7 +34,7 @@ class ArticleController extends ResourcesController
     {
         $validated = Article::validate($request);
         $article = Article::create($validated);
-        
+
         return response()->json([
             'success' => true,
             'data' => $article
@@ -75,7 +76,7 @@ class ArticleController extends ResourcesController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Article  $article
+     * @param Article $article
      * @return JsonResponse
      * @throws Exception
      */

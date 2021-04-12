@@ -1,13 +1,13 @@
 <?php
 
-use App\Http\Controllers\Main\Main\Main\ImagesController;
-use App\Http\Controllers\Main\Main\Main\JobController;
-use App\Http\Controllers\Main\Main\Main\MailsController;
-use App\Http\Controllers\Main\Main\Main\MemberController;
-use App\Http\Controllers\Main\Main\Main\MetaController;
-use App\Http\Controllers\Main\Main\Main\ProjectController;
-use App\Http\Controllers\Main\Main\Main\ServiceController;
-use App\Http\Controllers\Main\Main\Main\ArticleController;
+use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ImagesController;
+use App\Http\Controllers\JobController;
+use App\Http\Controllers\MailsController;
+use App\Http\Controllers\MemberController;
+use App\Http\Controllers\MetaController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
 /*

@@ -1,7 +1,8 @@
 <?php
 
-use App\Http\Controllers\Main\Main\Main\Auth\AuthController;
-use App\Http\Controllers\Main\Main\Main\Auth\PasswordResetLinkController;
+
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\PasswordResetLinkController;
 use Illuminate\Support\Facades\Route;
 
 
