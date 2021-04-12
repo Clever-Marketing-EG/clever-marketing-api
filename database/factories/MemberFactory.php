@@ -29,7 +29,8 @@ class MemberFactory extends Factory
             'profile' => rand(0,1) === 1? $this->faker->text : '',
             'profile_ar' => rand(0,1) === 1? $this->faker->text : '',
             'facebook' => $this->faker->url,
-            'linkedin' => $this->faker->url
+            'linkedin' => $this->faker->url,
+            'image_url' => $this->faker->imageUrl()
         ];
     }
 }
