@@ -6,22 +6,20 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
-class Job extends Model
+class Project extends Model
 {
     use HasFactory;
 
     protected $guarded = [];
 
     protected $casts = [
-        'description' => 'array',
-        'requirements' => 'array',
         'created_at' => 'datetime:d M Y',
         'updated_at' => 'datetime:d M Y'
     ];
 
 
     /**
-     * Validate Job instance
+     * Validate Project instance
      *
      * @param Request $request
      * @return array
@@ -29,12 +27,8 @@ class Job extends Model
     public static function validate(Request $request): array
     {
         return $request->validate([
-            'title' => 'required|string|min:3',
-            'description' => 'required|array|min:1',
-            'description.*' => 'required|string|distinct|min:3',
-            'requirements' => 'required|array|min:1',
-            'requirements.*' => 'required|string|distinct|min:3',
-            'image_url' => 'required|url'
+            'image_url' => 'url',
+            'type' => 'required|in:web,branding,graphics'
         ]);
     }
 }
