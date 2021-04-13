@@ -18,10 +18,10 @@ class ArticleController extends ResourcesController
     {
         $articles = trans('articles');
 
-        return response()->json([
-            'success' => true,
-            'data' => $articles
-        ]);
+        return response()->json(array_merge(
+            ['success' => true],
+            $articles
+        ));
     }
 
     /**

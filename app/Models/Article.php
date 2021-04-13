@@ -55,13 +55,15 @@ class Article extends Model
 
     public static function loadEnglish(){
         return Article::select('id', 'title', 'content', 'note', 'image_url', 'created_at')
-        ->get()
+        ->latest()
+        ->paginate(5)
         ->toArray();
 
     }
     public static function loadArabic(){
         return Article::select('id', 'title_ar as title', 'content_ar as content', 'note_ar as note', 'image_url', 'created_at')
-        ->get()
+        ->latest()
+        ->paginate(5)
         ->toArray();
     }
 }
