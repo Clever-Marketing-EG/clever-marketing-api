@@ -29,7 +29,7 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::apiResource('members', MemberController::class);
-Route::get('/dashboard/members/{member}',[MemberController::class, 'showFull']);
+Route::get('/dashboard/members/{member}',[MemberController::class, 'showFull'])->name('dashboard.members');
 
 
 /*
@@ -54,7 +54,7 @@ Route::apiResource('jobs', JobController::class);
 |--------------------------------------------------------------------------
 */
 Route::apiResource('services', ServiceController::class);
-Route::get('/dashboard/services/{service}',[ServiceController::class, 'showFull']);
+Route::get('/dashboard/services/{service}',[ServiceController::class, 'showFull'])->name('dashboard.services');
 
 
 /*
@@ -63,7 +63,7 @@ Route::get('/dashboard/services/{service}',[ServiceController::class, 'showFull'
 |--------------------------------------------------------------------------
 */
 Route::apiResource('articles', ArticleController::class);
-Route::get('/dashboard/articles/{article}',[ArticleController::class, 'showFull']);
+Route::get('/dashboard/articles/{article}',[ArticleController::class, 'showFull'])->name('dashboard.articles');
 
 
 
@@ -73,7 +73,7 @@ Route::get('/dashboard/articles/{article}',[ArticleController::class, 'showFull'
 |--------------------------------------------------------------------------
 */
 Route::apiResource('meta', MetaController::class)->only(['index', 'update']);
-Route::get('/dashboard/meta', [MetaController::class, 'fullIndex']);
+Route::get('/dashboard/meta', [MetaController::class, 'fullIndex'])->name('dashboard.meta');
 
 
 

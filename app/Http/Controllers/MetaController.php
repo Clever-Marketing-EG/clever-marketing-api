@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Meta;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
-use Illuminate\Http\Response;
 
 class MetaController extends ResourcesController
 {
@@ -37,49 +36,23 @@ class MetaController extends ResourcesController
         ]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param Request $request
-     * @return Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param Meta $meta
-     * @return Response
-     */
-    public function show(Meta $meta)
-    {
-        //
-    }
-
 
     /**
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param Meta $meta
-     * @return Response
+     * @param Meta $metum
+     * @return JsonResponse
      */
-    public function update(Request $request, Meta $meta)
+    public function update(Request $request, Meta $metum): JsonResponse
     {
-        //
-    }
+        $validated = Meta::validate($request);
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param Meta $meta
-     * @return Response
-     */
-    public function destroy(Meta $meta)
-    {
-        //
+        $metum->update($validated);
+
+        return response()->json([
+            'success' => true,
+            'data' => $metum
+        ]);
     }
 }

@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Http\Request;
 
 class Meta extends Model
 {
@@ -15,17 +16,36 @@ class Meta extends Model
 
 
     /**
+     *
+     *
+     * @param Request $request
+     * @return array
+     */
+    public static function validate(Request $request): array
+    {
+        return $request->validate([
+            'position' => 'required|string|min:3',
+            'name' => 'required|string|min:3',
+            'content' => 'required|string|min:3',
+            'content_ar' => 'required|string|min:3',
+            'type' => 'required|string|min:3|in:text,image',
+            'page' => 'required|string|min:3'
+        ]);
+
+    }
+    /**
      * Load English Meta from the database
      *
      * @return mixed
      */
     public static function loadEnglish()
     {
-        return Meta::select('position', 'name', 'content', 'type', 'page')
+        return Meta::select('id', 'position', 'name', 'content', 'type', 'page')
             ->get()
             ->mapWithKeys(function ($item) {
                 return array(
                     $item['name'] => [
+                        'id' => $item['id'],
                         'position' => $item['position'],
                         'content' => $item['content'],
                         'page' => $item['page'],
@@ -44,11 +64,12 @@ class Meta extends Model
      */
     public static function loadArabic()
     {
-        return Meta::select('position', 'name', 'content_ar', 'type', 'page')
+        return Meta::select('id', 'position', 'name', 'content_ar', 'type', 'page')
             ->get()
             ->mapWithKeys(function ($item) {
                 return array(
                     $item['name'] => [
+                        'id' => $item['id'],
                         'position' => $item['position'],
                         'content' => $item['content_ar'],
                         'page' => $item['page'],
