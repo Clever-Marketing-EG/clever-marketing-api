@@ -56,6 +56,21 @@ class ArticleController extends ResourcesController
     }
 
     /**
+     * Show full data of the resource
+     *
+     * @param Article $article
+     * @return JsonResponse
+     */
+    public function showFull(Article $article): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $article
+        ]);
+    }
+
+
+    /**
      * Update the specified resource in storage.
      *
      * @param  Request  $request

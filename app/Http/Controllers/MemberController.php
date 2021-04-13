@@ -55,6 +55,22 @@ class MemberController extends ResourcesController
         ]);
     }
 
+
+    /**
+     * Show full data of the resource
+     *
+     * @param Member $member
+     * @return JsonResponse
+     */
+    public function showFull(Member $member): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $member
+        ]);
+    }
+
+
     /**
      * Update the specified resource in storage.
      *

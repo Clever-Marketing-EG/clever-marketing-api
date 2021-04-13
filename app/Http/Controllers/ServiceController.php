@@ -54,6 +54,23 @@ class ServiceController extends ResourcesController
         ]);
     }
 
+
+    /**
+     * Show full data of the resource
+     *
+     * @param Service $service
+     * @return JsonResponse
+     */
+    public function showFull(Service $service): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $service
+        ]);
+    }
+
+
+
     /**
      * Update the specified resource in storage.
      *

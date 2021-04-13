@@ -22,7 +22,7 @@ class MailsController extends Controller
 
         return response()->json([
             'success' => true,
-            'data' => 'Thanks for contacting us!'
+            'data' => trans('utils.contact-us-thanks')
         ]);
     }
 }

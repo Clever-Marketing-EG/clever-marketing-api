@@ -27,6 +27,7 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::apiResource('members', MemberController::class);
+Route::get('/dashboard/members/{member}',[MemberController::class, 'showFull']);
 
 
 /*
@@ -51,6 +52,7 @@ Route::apiResource('jobs', JobController::class);
 |--------------------------------------------------------------------------
 */
 Route::apiResource('services', ServiceController::class);
+Route::get('/dashboard/services/{service}',[ServiceController::class, 'showFull']);
 
 
 /*
@@ -59,6 +61,7 @@ Route::apiResource('services', ServiceController::class);
 |--------------------------------------------------------------------------
 */
 Route::apiResource('articles', ArticleController::class);
+Route::get('/dashboard/articles/{article}',[ArticleController::class, 'showFull']);
 
 
 
@@ -68,6 +71,7 @@ Route::apiResource('articles', ArticleController::class);
 |--------------------------------------------------------------------------
 */
 Route::apiResource('meta', MetaController::class)->only(['index', 'update']);
+Route::get('/dashboard/meta', [MetaController::class, 'fullIndex']);
 
 
 
