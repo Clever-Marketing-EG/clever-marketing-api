@@ -24,6 +24,20 @@ class MetaController extends ResourcesController
 
 
     /**
+     * Display a listing of the resource.
+     *
+     * @return JsonResponse
+     */
+    public function fullIndex(): JsonResponse
+    {
+        $meta = Meta::all();
+        return response()->json([
+            'success' => true,
+            'data' => $meta
+        ]);
+    }
+
+    /**
      * Store a newly created resource in storage.
      *
      * @param Request $request

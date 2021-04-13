@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
@@ -16,6 +17,7 @@ class ArticleController extends ResourcesController
     public function index(): JsonResponse
     {
         $articles = trans('articles');
+
         return response()->json([
             'success' => true,
             'data' => $articles
@@ -32,6 +34,7 @@ class ArticleController extends ResourcesController
     {
         $validated = Article::validate($request);
         $article = Article::create($validated);
+
         return response()->json([
             'success' => true,
             'data' => $article
@@ -51,6 +54,21 @@ class ArticleController extends ResourcesController
             'data' => $article->loadLocale()
         ]);
     }
+
+    /**
+     * Show full data of the resource
+     *
+     * @param Article $article
+     * @return JsonResponse
+     */
+    public function showFull(Article $article): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $article
+        ]);
+    }
+
 
     /**
      * Update the specified resource in storage.
@@ -73,7 +91,7 @@ class ArticleController extends ResourcesController
     /**
      * Remove the specified resource from storage.
      *
-     * @param  Article  $article
+     * @param Article $article
      * @return JsonResponse
      * @throws Exception
      */

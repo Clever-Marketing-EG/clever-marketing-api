@@ -24,3 +24,5 @@ Route::fallback(function () {
        'message' => 'Not Found'
    ], 404);
 });
+
+require __DIR__ . '/auth.php';
