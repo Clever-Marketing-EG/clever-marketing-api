@@ -27,7 +27,7 @@ class MetaFactory extends Factory
             'content' => $this->faker->text,
             'content_ar' => 'محتوى',
             'type' => 'text',
-            'page' => 'home'
+            'page' =>  $this->faker->randomElement(['home', 'about-us', 'contact-us'])
         ];
     }
 }

@@ -42,17 +42,6 @@ class Meta extends Model
     {
         return Meta::select('id', 'position', 'name', 'content', 'type', 'page')
             ->get()
-            ->mapWithKeys(function ($item) {
-                return array(
-                    $item['name'] => [
-                        'id' => $item['id'],
-                        'position' => $item['position'],
-                        'content' => $item['content'],
-                        'page' => $item['page'],
-                        'type' => $item['type'],
-                    ]
-                );
-            })
             ->toArray();
     }
 
@@ -66,17 +55,6 @@ class Meta extends Model
     {
         return Meta::select('id', 'position', 'name', 'content_ar', 'type', 'page')
             ->get()
-            ->mapWithKeys(function ($item) {
-                return array(
-                    $item['name'] => [
-                        'id' => $item['id'],
-                        'position' => $item['position'],
-                        'content' => $item['content_ar'],
-                        'page' => $item['page'],
-                        'type' => $item['type'],
-                    ]
-                );
-            })
             ->toArray();
     }
 }
