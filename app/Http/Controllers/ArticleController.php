@@ -51,7 +51,7 @@ class ArticleController extends ResourcesController
     {
         return response()->json([
             'success' => true,
-            'data' => $article->loadLocale()
+            'data' => $article
         ]);
     }
 
