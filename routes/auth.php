@@ -1,32 +1,17 @@
 <?php
 
-
-use App\Http\Controllers\Auth\AuthController;
-use App\Http\Controllers\Auth\PasswordResetLinkController;
+use App\Http\Controllers\Auth\NewPasswordController;
 use Illuminate\Support\Facades\Route;
 
 
-Route::group([
-    'prefix' => 'auth'
-], function () {
-    Route::post('register', [AuthController::class, 'register'])
-        ->name('auth.register');
 
-    Route::post('login', [AuthController::class, 'login'])
-        ->name('auth.login');
 
-    Route::patch('update', [AuthController::class, 'update'])
-        ->name('auth.update');
+Route::get('/reset-password/{token}', [NewPasswordController::class, 'create'])
+    ->name('password.reset');
 
-    Route::post('logout', [AuthController::class, 'logout'])
-        ->name('auth.logout');
+Route::post('/reset-password', [NewPasswordController::class, 'store'])
+    ->name('password.update');
 
-    Route::post('refresh', [AuthController::class, 'refresh'])
-        ->name('auth.refresh');
 
-    Route::post('me', [AuthController::class, 'me'])
-        ->name('auth.name');
-
-    Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
-        ->name('password.email');
-});
+Route::get('/password-reset-confirm', [NewPasswordController::class, 'confirm'])
+    ->name('password.reset.confirm');

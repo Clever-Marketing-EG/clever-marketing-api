@@ -1,6 +1,8 @@
 <?php
 
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\Auth\AuthController;
+use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\MailsController;
@@ -94,7 +96,27 @@ Route::post('/mails/contact-us', [MailsController::class, 'contactUs'])->name('m
 
 
 /*--------------------------------------------------------------------------*/
-require __DIR__ . '/auth.php';
+
+Route::group([
+    'prefix' => 'auth'
+], function () {
+
+    Route::post('login', [AuthController::class, 'login'])
+        ->name('auth.login');
+
+    Route::post('logout', [AuthController::class, 'logout'])
+        ->name('auth.logout');
+
+    Route::post('refresh', [AuthController::class, 'refresh'])
+        ->name('auth.refresh');
+
+    Route::post('me', [AuthController::class, 'me'])
+        ->name('auth.name');
+
+    Route::post('/forgot-password', [PasswordResetLinkController::class, 'store'])
+        ->name('password.email');
+});
+
 Route::fallback(function () {
     return response()->json([
         'success' => false,
