@@ -27,7 +27,7 @@ class Article extends Model
                 'content' => $this['content_ar'],
                 'note' => $this['note_ar'],
                 'image_url' => $this['image_url'],
-                'created_at' => $this['created_at']
+                'created_at' => $this['created_at']->format('d M Y')
             ];
         } else {
             return $this->only('id', 'title', 'content', 'note', 'image_url', 'created_at');
@@ -65,5 +65,10 @@ class Article extends Model
         ->latest()
         ->paginate(5)
         ->toArray();
+    }
+
+    public function getCreatedAt($value)
+    {
+//        return datet
     }
 }
