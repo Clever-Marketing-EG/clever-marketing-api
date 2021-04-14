@@ -25,18 +25,19 @@ class Service extends Model
      */
     public function loadLocale(): array
     {
-        if(App::getLocale() === 'ar') {
+        if (App::getLocale() === 'ar') {
             return [
                 'id' => $this['id'],
                 'name' => $this['name_ar'],
                 'description' => $this['description_ar'],
                 'points' => $this['points_ar'],
-                'image_url' => $this['image_url']
+                'image_url_1' => $this['image_url_1'],
+                'image_url_2' => $this['image_url_2'],
+                'image_url_3' => $this['image_url_3'],
             ];
         } else {
-            return $this->only('id', 'name', 'description', 'points', 'image_url');
+            return $this->only('id', 'name', 'description', 'points', 'image_url_1', 'image_url_2', 'image_url_3');
         }
-
     }
 
     /**
@@ -55,22 +56,23 @@ class Service extends Model
             'points.*' => ['required', 'string', 'distinct', 'min:3'],
             'points_ar' => 'required|array|min:1',
             'points_ar.*' => ['required', 'string', 'distinct', 'min:3'],
-            'image_url' => 'required|url'
+            'image_url_1' => 'required|url',
+            'image_url_2' => 'required|url',
+            'image_url_3' => 'required|url'
         ]);
     }
 
     public static function loadEnglish()
     {
-        return Service::select('id', 'name', 'description', 'points', 'image_url')
+        return Service::select('id', 'name', 'description', 'points', 'image_url_1', 'image_url_2', 'image_url_3')
             ->get()
             ->toArray();
     }
 
     public static function loadArabic()
     {
-        return Service::select('id', 'name_ar as name', 'description_ar as description', 'points_ar as points', 'image_url')
+        return Service::select('id', 'name_ar as name', 'description_ar as description', 'points_ar as points', 'image_url_1', 'image_url_2', 'image_url_3')
             ->get()
             ->toArray();
     }
-
 }
