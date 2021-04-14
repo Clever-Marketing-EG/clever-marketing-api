@@ -25,6 +25,7 @@ class JobFactory extends Factory
             'title' => $this->faker->jobTitle,
             'description' => [$this->faker->sentence, $this->faker->sentence, $this->faker->sentence],
             'requirements' => [$this->faker->sentence, $this->faker->sentence, $this->faker->sentence],
+            'content' => $this->faker->sentence,
             'image_url' => $this->faker->imageUrl()
         ];
     }
