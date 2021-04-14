@@ -30,7 +30,14 @@ class Article extends Model
                 'created_at' => $this['created_at']->format('d M Y')
             ];
         } else {
-            return $this->only('id', 'title', 'content', 'note', 'image_url', 'created_at');
+            return [
+                'id' => $this['id'],
+                'title' => $this['title'],
+                'content' => $this['content'],
+                'note' => $this['note'],
+                'image_url' => $this['image_url'],
+                'created_at' => $this['created_at']->format('d M Y')
+            ];;
         }
     }
 
