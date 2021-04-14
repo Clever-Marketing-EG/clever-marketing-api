@@ -29,7 +29,8 @@ class ServiceFactory extends Factory
             'description_ar' => $this->faker->text,
             'points' => [$this->faker->sentence, $this->faker->sentence, $this->faker->sentence],
             'points_ar' => [$this->faker->sentence, $this->faker->sentence, $this->faker->sentence],
-            'image_url' => $this->faker->imageUrl()
+            'icon_url' => $this->faker->imageUrl(),
+            'images' => [$this->faker->imageUrl(), $this->faker->imageUrl()]
         ];
     }
 }
