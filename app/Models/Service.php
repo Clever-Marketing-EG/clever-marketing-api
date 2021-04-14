@@ -15,7 +15,8 @@ class Service extends Model
 
     protected $casts = [
         'points' => 'array',
-        'points_ar' => 'array'
+        'points_ar' => 'array',
+        'images' => 'array'
     ];
 
     public $timestamps = false;
@@ -31,12 +32,11 @@ class Service extends Model
                 'name' => $this['name_ar'],
                 'description' => $this['description_ar'],
                 'points' => $this['points_ar'],
-                'image_url_1' => $this['image_url_1'],
-                'image_url_2' => $this['image_url_2'],
-                'image_url_3' => $this['image_url_3'],
+                'icon_url' => $this['icon_url'],
+                'images' => $this['images'],
             ];
         } else {
-            return $this->only('id', 'name', 'description', 'points', 'image_url_1', 'image_url_2', 'image_url_3');
+            return $this->only('id', 'name', 'description', 'points', 'icon_url', 'images');
         }
     }
 
@@ -56,22 +56,21 @@ class Service extends Model
             'points.*' => ['required', 'string', 'distinct', 'min:3'],
             'points_ar' => 'required|array|min:1',
             'points_ar.*' => ['required', 'string', 'distinct', 'min:3'],
-            'image_url_1' => 'required|url',
-            'image_url_2' => 'required|url',
-            'image_url_3' => 'required|url'
+            'icon_url' => 'required|url',
+            'images' => 'required|array|min:1'
         ]);
     }
 
     public static function loadEnglish()
     {
-        return Service::select('id', 'name', 'description', 'points', 'image_url_1', 'image_url_2', 'image_url_3')
+        return Service::select('id', 'name', 'description', 'points', 'icon_url', 'images')
             ->get()
             ->toArray();
     }
 
     public static function loadArabic()
     {
-        return Service::select('id', 'name_ar as name', 'description_ar as description', 'points_ar as points', 'image_url_1', 'image_url_2', 'image_url_3')
+        return Service::select('id', 'name_ar as name', 'description_ar as description', 'points_ar as points', 'icon_url', 'images')
             ->get()
             ->toArray();
     }

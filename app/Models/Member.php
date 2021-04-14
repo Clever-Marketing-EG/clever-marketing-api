@@ -52,14 +52,16 @@ class Member extends Model
             'profile_ar' => 'string|min:3',
             'facebook' => 'required|string|url|min:3',
             'linkedin' => 'required|string|url|min:3',
-            'image_url' => 'required|url'
+            'image_url' => 'required|url',
+            'type' => 'required|in:tech,marketing,designers'
+
         ]);
     }
 
 
     public static function loadEnglish()
     {
-        return Member::select('id', 'name', 'job', 'profile', 'facebook', 'linkedin', 'image_url')
+        return Member::select('id', 'name', 'job', 'profile', 'facebook', 'linkedin', 'image_url', 'type')
             ->get()
             ->toArray();
     }
@@ -67,7 +69,7 @@ class Member extends Model
 
     public static function loadArabic()
     {
-        return Member::select('id', 'name_ar as name', 'job_ar as job', 'profile_ar as profile', 'facebook', 'linkedin', 'image_url')
+        return Member::select('id', 'name_ar as name', 'job_ar as job', 'profile_ar as profile', 'facebook', 'linkedin', 'image_url' , 'type')
             ->get()
             ->toArray();
     }
