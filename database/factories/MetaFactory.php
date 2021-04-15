@@ -66,7 +66,7 @@ class MetaFactory extends Factory
                 [
                     'position' => 'Contact Page' ,
                     'name' => 'contact_location',
-                    'content' => 'Cairo,Egypt',
+                    'content' => 'Alexandria,Egypt',
                     'content_ar' => 'مصر',
                     'type' => 'text',
                     'page' => 'contact'
