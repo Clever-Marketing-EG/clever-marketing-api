@@ -54,8 +54,8 @@ class Article extends Model
             'title_ar' => 'required|string|min:3',
             'content' => 'required|string|min:3',
             'content_ar' => 'required|string|min:3',
-            'note' => 'string|min:3',
-            'note_ar' => 'string|min:3',
+            'note' => 'string|min:3|nullable',
+            'note_ar' => 'string|min:3|nullable',
             'image_url' => 'required|url'
         ]);
     }
