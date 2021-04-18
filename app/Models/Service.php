@@ -23,18 +23,13 @@ class Service extends Model
     /**
      * Load Service by language
      */
-    public function loadLocale(): array
+    public function loadLocale()
     {
         if (App::getLocale() === 'ar') {
-            return [
-                'id' => $this['id'],
-                'name' => $this['name_ar'],
-                'description' => $this['description_ar'],
-                'points' => $this['points_ar'],
-                'icon_url' => $this['icon_url'],
-                'image_url_1' => $this['image_url_1'],
-                'image_url_2' => $this['image_url_2'],
-            ];
+            return $this->where('id', $this['id'])->first([
+                'id', 'name_ar as name', 'description_ar as description', 'points_ar as points',
+                'icon_url', 'image_url_1', 'image_url_2'
+            ]);
         } else {
             return $this->only('id', 'name', 'description', 'points', 'icon_url', 'image_url_1', 'image_url_2');
         }

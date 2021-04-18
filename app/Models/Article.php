@@ -17,17 +17,16 @@ class Article extends Model
         'updated_at' => 'datetime:d M Y'
     ];
 
+
     /*Load Articles by language */
     public function loadLocale()
     {
         if (App::getLocale() === 'ar') {
-            return $this->get([
-                'id', 'title_ar as title', 'content_ar as content', 'note_ar as note', 'image_url', 'created_at'
+            return $this->where('id', $this['id'])->first([
+                'id', 'title_ar' => 'title', 'content_ar as content', 'note_ar as note', 'image_url', 'created_at'
             ]);
         } else {
-            return $this->get([
-                'id', 'title', 'content', 'note', 'image_url', 'created_at'
-            ]);
+            return $this->only('id', 'title', 'content', 'note', 'image_url', 'created_at');
         }
     }
 

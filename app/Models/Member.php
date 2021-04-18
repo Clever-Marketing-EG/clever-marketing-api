@@ -18,18 +18,12 @@ class Member extends Model
     /**
      * Load Member by language
      */
-    public function loadLocale(): array
+    public function loadLocale()
     {
         if(App::getLocale() === 'ar') {
-            return [
-                'id' => $this['id'],
-                'name' => $this['name_ar'],
-                'job' => $this['job_ar'],
-                'profile' => $this['profile_ar'],
-                'facebook' => $this['facebook'],
-                'linkedin' => $this['linkedin'],
-                'image_url' => $this['image_url']
-            ];
+            return $this->where('id', $this['id'])->first([
+                'id', 'name_ar as name', 'job_ar as job', 'profile_ar as profile', 'facebook', 'linkedin', 'image_url'
+            ]);
         } else {
             return $this->only('id', 'name', 'job', 'profile', 'facebook', 'linkedin', 'image_url');
         }
