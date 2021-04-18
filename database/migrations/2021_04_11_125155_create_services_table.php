@@ -22,7 +22,8 @@ class CreateServicesTable extends Migration
             $table->text('points');
             $table->text('points_ar');
             $table->string('icon_url');
-            $table->text('images');
+            $table->string('image_url_1');
+            $table->string('image_url_2');
         });
     }
 

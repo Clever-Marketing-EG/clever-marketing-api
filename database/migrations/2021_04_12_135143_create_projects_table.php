@@ -15,7 +15,13 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('title_ar');
+            $table->text('description');
+            $table->text('description_ar');
             $table->string('image_url');
+            $table->string('additional_images_1');
+            $table->string('additional_images_2');
             $table->enum('type', ['web', 'graphics', 'branding'])->default('web');
             $table->timestamps();
         });
