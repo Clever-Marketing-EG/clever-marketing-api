@@ -2,17 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Project;
+use App\Models\Process;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ProjectFactory extends Factory
+class ProcessFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Project::class;
+    protected $model = Process::class;
 
     /**
      * Define the model's default state.
@@ -26,10 +26,6 @@ class ProjectFactory extends Factory
             'title_ar' => $this->faker->sentence,
             'description' => $this->faker->text,
             'description_ar' => $this->faker->text,
-            'image_url' => $this->faker->imageUrl(),
-            'additional_images_1' => $this->faker->imageUrl(),
-            'additional_images_2' => $this->faker->imageUrl(),
-            'type' => $this->faker->randomElement(['web', 'graphics', 'branding'])
         ];
     }
 }

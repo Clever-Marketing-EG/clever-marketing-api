@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Project;
+use App\Models\Process;
 use Illuminate\Database\Seeder;
 
 class ProjectSeeder extends Seeder
@@ -14,6 +15,9 @@ class ProjectSeeder extends Seeder
      */
     public function run()
     {
-        Project::factory(50)->create();
+        Project::factory()
+            ->has(Process::factory()->count(5))
+            ->count(100)
+            ->create();
     }
 }
