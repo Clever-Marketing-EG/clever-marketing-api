@@ -15,8 +15,7 @@ class Service extends Model
 
     protected $casts = [
         'points' => 'array',
-        'points_ar' => 'array',
-        'images' => 'array'
+        'points_ar' => 'array'
     ];
 
     public $timestamps = false;
