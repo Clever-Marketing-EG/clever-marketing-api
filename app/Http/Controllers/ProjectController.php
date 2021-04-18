@@ -16,7 +16,7 @@ class ProjectController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        $projects = Project::all();
+        $projects = Project::select('id','title', 'image_url')->get();
 
         return response()->json([
             'success' => true,
@@ -47,11 +47,19 @@ class ProjectController extends ResourcesController
      * @param Project $project
      * @return JsonResponse
      */
-    public function show(Project $project): JsonResponse
+    public function show(Project $project)
     {
+//        $project = Project::with(['processes' => function ($query) {
+//            $query->select('id', 'project_id', 'title_ar as title');
+//        }])->get();
+//        return $project->with(['processes' => function ($query) {
+//            $query->select('id', 'project_id', 'title');
+//        }])->get();
+//        return $project;
+
         return response()->json([
             'success' => true,
-            'data' => $project
+            'data' => $project->loadLocale()
         ]);
     }
 

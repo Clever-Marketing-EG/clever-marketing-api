@@ -26,6 +26,7 @@ class ProcessFactory extends Factory
             'title_ar' => $this->faker->sentence,
             'description' => $this->faker->text,
             'description_ar' => $this->faker->text,
+            'image_url' => $this->faker->imageUrl()
         ];
     }
 }

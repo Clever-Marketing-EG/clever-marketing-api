@@ -37,7 +37,7 @@ class Article extends Model
                 'note' => $this['note'],
                 'image_url' => $this['image_url'],
                 'created_at' => $this['created_at']->format('d M Y')
-            ];;
+            ];
         }
     }
 
@@ -67,6 +67,8 @@ class Article extends Model
         ->toArray();
 
     }
+
+
     public static function loadArabic(){
         return Article::select('id', 'title_ar as title', 'content_ar as content', 'note_ar as note', 'image_url', 'created_at')
         ->latest()
@@ -74,8 +76,4 @@ class Article extends Model
         ->toArray();
     }
 
-    public function getCreatedAt($value)
-    {
-//        return datet
-    }
 }

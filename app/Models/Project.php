@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\App;
 
 class Project extends Model
 {
@@ -18,6 +19,7 @@ class Project extends Model
         'updated_at' => 'datetime:M Y'
     ];
 
+//    protected $with = ['processes'];
 
     /**
      * Validate Project instance
@@ -49,4 +51,27 @@ class Project extends Model
     {
         return $this->hasMany(Process::class);
     }
+
+    /*Load Articles by language */
+    public function loadLocale()
+    {
+        if (App::getLocale() === 'ar') {
+            return $this->get([
+                'id',
+                'title_ar as title',
+                'description_ar as description',
+                'additional_images_1', 'additional_images_2', 'type'
+            ])->load(['processes' => function ($query) {
+                $query->select('id', 'project_id', 'title_ar as title', 'description_ar as description', 'image_url');
+            }]);
+        } else {
+            return $this->get([
+                'id', 'title', 'description', 'additional_images_1', 'additional_images_2', 'type'
+            ])->load(['processes' => function ($query) {
+                $query->select('id', 'project_id', 'title', 'description', 'image_url');
+            }]);
+        }
+    }
+
+
 }

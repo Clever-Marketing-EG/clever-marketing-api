@@ -19,8 +19,8 @@ class CreateProcessesTable extends Migration
             $table->string('title_ar');
             $table->text('description');
             $table->text('description_ar');
+            $table->string('image_url');
             $table->foreignId('project_id')->constrained()->onDelete('cascade');
-            $table->timestamps();
         });
     }
 
