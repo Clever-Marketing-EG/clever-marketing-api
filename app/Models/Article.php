@@ -30,7 +30,14 @@ class Article extends Model
                 'created_at' => $this['created_at']->format('d M Y')
             ];
         } else {
-            return $this->only('id', 'title', 'content', 'note', 'image_url', 'created_at');
+            return [
+                'id' => $this['id'],
+                'title' => $this['title'],
+                'content' => $this['content'],
+                'note' => $this['note'],
+                'image_url' => $this['image_url'],
+                'created_at' => $this['created_at']->format('d M Y')
+            ];;
         }
     }
 
@@ -47,8 +54,8 @@ class Article extends Model
             'title_ar' => 'required|string|min:3',
             'content' => 'required|string|min:3',
             'content_ar' => 'required|string|min:3',
-            'note' => 'string|min:3',
-            'note_ar' => 'string|min:3',
+            'note' => 'string|min:3|nullable',
+            'note_ar' => 'string|min:3|nullable',
             'image_url' => 'required|url'
         ]);
     }
