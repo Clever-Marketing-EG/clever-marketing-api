@@ -46,6 +46,7 @@ Route::apiResource('projects', ProjectController::class);
 |--------------------------------------------------------------------------
 */
 Route::apiResource('jobs', JobController::class);
+Route::get('/dashboard/jobs/{job}',[JobController::class, 'show'])->name('dashboard.jobs');
 
 
 /*
