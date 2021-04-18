@@ -19,7 +19,6 @@ class Project extends Model
         'updated_at' => 'datetime:M Y'
     ];
 
-//    protected $with = ['processes'];
 
     /**
      * Validate Project instance

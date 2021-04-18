@@ -18,26 +18,16 @@ class Article extends Model
     ];
 
     /*Load Articles by language */
-    public function loadLocale(): array
+    public function loadLocale()
     {
         if (App::getLocale() === 'ar') {
-            return [
-                'id' => $this['id'],
-                'title' => $this['title_ar'],
-                'content' => $this['content_ar'],
-                'note' => $this['note_ar'],
-                'image_url' => $this['image_url'],
-                'created_at' => $this['created_at']->format('d M Y')
-            ];
+            return $this->get([
+                'id', 'title_ar as title', 'content_ar as content', 'note_ar as note', 'image_url', 'created_at'
+            ]);
         } else {
-            return [
-                'id' => $this['id'],
-                'title' => $this['title'],
-                'content' => $this['content'],
-                'note' => $this['note'],
-                'image_url' => $this['image_url'],
-                'created_at' => $this['created_at']->format('d M Y')
-            ];
+            return $this->get([
+                'id', 'title', 'content', 'note', 'image_url', 'created_at'
+            ]);
         }
     }
 

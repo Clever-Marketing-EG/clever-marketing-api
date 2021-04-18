@@ -47,16 +47,8 @@ class ProjectController extends ResourcesController
      * @param Project $project
      * @return JsonResponse
      */
-    public function show(Project $project)
+    public function show(Project $project): JsonResponse
     {
-//        $project = Project::with(['processes' => function ($query) {
-//            $query->select('id', 'project_id', 'title_ar as title');
-//        }])->get();
-//        return $project->with(['processes' => function ($query) {
-//            $query->select('id', 'project_id', 'title');
-//        }])->get();
-//        return $project;
-
         return response()->json([
             'success' => true,
             'data' => $project->loadLocale()
