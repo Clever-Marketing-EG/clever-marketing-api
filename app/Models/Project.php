@@ -57,17 +57,16 @@ class Project extends Model
         if (App::getLocale() === 'ar') {
             return $this->where('id', $this['id'])->first([
                 'id', 'title_ar as title', 'description_ar as description',
-                'additional_images_1', 'additional_images_2', 'type'
+                'additional_images_1', 'additional_images_2', 'type', 'image_url'
             ])->load(['processes' => function ($query) {
                 $query->select('id', 'project_id', 'title_ar as title', 'description_ar as description', 'image_url');
             }]);
         } else {
             return $this->where('id', $this['id'])->first([
-                'id', 'title', 'description', 'additional_images_1', 'additional_images_2', 'type'
+                'id', 'title', 'description', 'additional_images_1', 'additional_images_2', 'type', 'image_url'
             ])->load(['processes' => function ($query) {
                 $query->select('id', 'project_id', 'title', 'description', 'image_url');
             }]);
         }
     }
-
 }
