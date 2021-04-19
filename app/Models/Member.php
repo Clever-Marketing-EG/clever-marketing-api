@@ -48,7 +48,6 @@ class Member extends Model
             'linkedin' => 'required|string|url|min:3',
             'image_url' => 'required|url',
             'type' => 'required|in:tech,marketing,designers'
-
         ]);
     }
 
