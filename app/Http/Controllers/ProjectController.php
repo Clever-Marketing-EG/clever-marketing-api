@@ -16,7 +16,7 @@ class ProjectController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        $projects = Project::select('id','title', 'image_url')->get();
+        $projects = Project::select('id', 'title', 'image_url', 'type')->get();
 
         return response()->json([
             'success' => true,
