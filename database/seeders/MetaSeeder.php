@@ -35,32 +35,32 @@ class MetaSeeder extends Seeder
             [
                 'position' => 'Home Page',
                 'name' => 'image_1',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'home'
             ],
             [
                 'position' => 'Home Page',
                 'name' => 'image_2',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'home'
             ],
             [
                 'position' => 'Home Page',
                 'name' => 'image_3',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'home'
             ],
             [
                 'position' => 'Home Page',
                 'name' => 'image_4',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'home'
             ],
@@ -83,8 +83,8 @@ class MetaSeeder extends Seeder
             [
                 'position' => 'Home Page',
                 'name' => 'about_image',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'home'
             ],
@@ -147,24 +147,24 @@ class MetaSeeder extends Seeder
             [
                 'position' => 'Home Page',
                 'name' => 'team_image_1',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'home'
             ],
             [
                 'position' => 'Home Page',
                 'name' => 'team_image_2',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'home'
             ],
             [
                 'position' => 'Home Page',
                 'name' => 'team_image_3',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'home'
             ],
@@ -197,8 +197,8 @@ class MetaSeeder extends Seeder
             [
                 'position' => 'About Page',
                 'name'=> 'about_image_1',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'about'
             ],
@@ -221,8 +221,8 @@ class MetaSeeder extends Seeder
             [
                 'position' => 'About Page',
                 'name'=> 'about_image_2',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'about'
             ],
@@ -245,8 +245,8 @@ class MetaSeeder extends Seeder
             [
                 'position' => 'About Page',
                 'name'=> 'about_image_3',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'about'
             ],
@@ -269,8 +269,8 @@ class MetaSeeder extends Seeder
             [
                 'position' => 'About Page',
                 'name'=> 'about_image_4',
-                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
-                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
+                'content_ar' => 'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.business-standard.com%2Farticle%2Fcompanies%2Fwork-from-home-only-0-2-it-sector-workforce-highly-productive-says-study-120041001193_1.html&psig=AOvVaw0pX4RHNWnJ0j0OVnYxVyR1&ust=1618998426372000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCNCjsaTFjPACFQAAAAAdAAAAABAD',
                 'type' => 'image',
                 'page' => 'about'
             ],
