@@ -521,6 +521,16 @@ class MetaSeeder extends Seeder
                 'page' => 'service'
             ],
         );
+        $teamData = array(
+            [
+                'position' => 'Team Page',
+                'name'=> 'team_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'team'
+            ],
+        );
 
         $data = array_merge($contactData, $footerData, $homeData, $aboutData, $serviceData);
 
