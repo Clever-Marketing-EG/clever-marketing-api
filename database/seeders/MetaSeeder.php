@@ -120,7 +120,7 @@ class MetaSeeder extends Seeder
                 'type' => 'text',
                 'page' => 'home'
             ],
-        
+
             [
                 'position' => 'Home Page',
                 'name'=> 'team_title',
@@ -393,17 +393,10 @@ class MetaSeeder extends Seeder
 
         );
         $serviceData = array(
+
             [
                 'position' => 'Service Page',
-                'name'=> 'service_title_1',
-                'content' => 'Title !',
-                'content_ar' => 'محتوى',
-                'type' => 'text',
-                'page' => 'service'
-            ],
-            [
-                'position' => 'Service Page',
-                'name'=> 'service_title_2',
+                'name'=> 'service_title',
                 'content' => 'Title !',
                 'content_ar' => 'محتوى',
                 'type' => 'text',
