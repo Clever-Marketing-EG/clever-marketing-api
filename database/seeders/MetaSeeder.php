@@ -245,7 +245,7 @@ class MetaSeeder extends Seeder
                 'type' => 'text',
                 'page' => 'footer'
             ],
-            
+
         );
 
         $data = array_merge($contactData, $footerData);
