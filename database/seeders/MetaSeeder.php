@@ -180,7 +180,159 @@ class MetaSeeder extends Seeder
         $aboutData = array(
             [
                 'position' => 'About Page',
-                'name'=> 'about_title',
+                'name'=> 'about_title_1',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_content_1',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_image_1',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_title_2',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_content_2',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_image_2',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_title_3',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_content_3',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_image_3',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_title_4',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_content_4',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'about_image_4',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'values_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'values_title_1',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'values_content_1',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'values_title_2',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'values_content_2',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'values_title_3',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'values_content_3',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+            [
+                'position' => 'About Page',
+                'name'=> 'experts_title',
                 'content' => 'Title !',
                 'content_ar' => 'محتوى',
                 'type' => 'text',
@@ -248,7 +400,7 @@ class MetaSeeder extends Seeder
             
         );
 
-        $data = array_merge($contactData, $footerData);
+        $data = array_merge($contactData, $footerData, $homeData);
 
         DB::table('metas')->insert($data);
     }
