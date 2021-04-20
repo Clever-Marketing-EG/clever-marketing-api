@@ -15,7 +15,178 @@ class MetaSeeder extends Seeder
      */
     public function run()
     {
-        // Meta::factory(50)->create();
+        $homeData = array (
+            [
+                'position' => 'Home Page',
+                'name'=> 'intro_header',
+                'content' => 'Header !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'intro_content',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name' => 'image_1',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name' => 'image_2',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name' => 'image_3',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name' => 'image_4',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'about_header',
+                'content' => 'Header !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'about_content',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name' => 'about_image',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'service_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'fields_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'fields_content',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'projects_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'team_content',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'team_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'team_content',
+                'content' => 'Content !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name' => 'team_image_1',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name' => 'team_image_2',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name' => 'team_image_3',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'home'
+            ],
+            [
+                'position' => 'Home Page',
+                'name'=> 'news_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'home'
+            ],
+        );
+        $aboutData = array(
+            [
+                'position' => 'About Page',
+                'name'=> 'about_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'about'
+            ],
+        );
         $contactData = array(
             [   'position' => 'Contact Page' ,
                 'name' => 'contact_phone',
@@ -74,6 +245,7 @@ class MetaSeeder extends Seeder
                 'type' => 'text',
                 'page' => 'footer'
             ],
+            
         );
 
         $data = array_merge($contactData, $footerData);
