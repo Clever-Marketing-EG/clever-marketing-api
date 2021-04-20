@@ -399,8 +399,130 @@ class MetaSeeder extends Seeder
             ],
             
         );
+        $serviceData = array(
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_title_1',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_title_2',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_name_1',
+                'content' => 'Service !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_percentage_1',
+                'content' => '100 %',
+                'content_ar' => '100%',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_name_2',
+                'content' => 'Service !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_percentage_2',
+                'content' => '100 %',
+                'content_ar' => '100%',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_name_3',
+                'content' => 'Service !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_percentage_3',
+                'content' => '100 %',
+                'content_ar' => '100%',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_name_4',
+                'content' => 'Service !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_percentage_4',
+                'content' => '100 %',
+                'content_ar' => '100%',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_name_5',
+                'content' => 'Service !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_percentage_5',
+                'content' => '100 %',
+                'content_ar' => '100%',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_name_6',
+                'content' => 'Service !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_percentage_6',
+                'content' => '100 %',
+                'content_ar' => '100%',
+                'type' => 'text',
+                'page' => 'service'
+            ],
+            [
+                'position' => 'Service Page',
+                'name'=> 'service_image',
+                'content' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'content_ar' => 'http://life-golf.cloveregypt.com/be/public/storage/meta_images/about_us_1616949002.jpg',
+                'type' => 'image',
+                'page' => 'service'
+            ],
+        );
 
-        $data = array_merge($contactData, $footerData, $homeData);
+        $data = array_merge($contactData, $footerData, $homeData, $aboutData, $serviceData);
 
         DB::table('metas')->insert($data);
     }
