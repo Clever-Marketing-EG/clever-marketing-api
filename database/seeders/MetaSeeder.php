@@ -120,14 +120,7 @@ class MetaSeeder extends Seeder
                 'type' => 'text',
                 'page' => 'home'
             ],
-            [
-                'position' => 'Home Page',
-                'name'=> 'team_content',
-                'content' => 'Content !',
-                'content_ar' => 'محتوى',
-                'type' => 'text',
-                'page' => 'home'
-            ],
+        
             [
                 'position' => 'Home Page',
                 'name'=> 'team_title',
@@ -532,7 +525,7 @@ class MetaSeeder extends Seeder
             ],
         );
 
-        $data = array_merge($contactData, $footerData, $homeData, $aboutData, $serviceData);
+        $data = array_merge($contactData, $footerData, $homeData, $aboutData, $serviceData, $teamData);
 
         DB::table('metas')->insert($data);
     }
