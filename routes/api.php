@@ -8,6 +8,7 @@ use App\Http\Controllers\JobController;
 use App\Http\Controllers\MailsController;
 use App\Http\Controllers\MemberController;
 use App\Http\Controllers\MetaController;
+use App\Http\Controllers\ProcessController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -34,10 +35,11 @@ Route::get('/dashboard/members/{member}',[MemberController::class, 'showFull'])-
 
 /*
 |--------------------------------------------------------------------------
-| Members Routes
+| Projects Routes
 |--------------------------------------------------------------------------
 */
 Route::apiResource('projects', ProjectController::class);
+Route::apiResource('processes', ProcessController::class)->only('store', 'update', 'destroy');
 
 
 /*
