@@ -23,10 +23,12 @@ class Article extends Model
     {
         if (App::getLocale() === 'ar') {
             return $this->where('id', $this['id'])->first([
-                'id', 'title_ar' => 'title', 'content_ar as content', 'note_ar as note', 'image_url', 'created_at'
+                'id', 'title_ar as title', 'content_ar as content', 'note_ar as note', 'image_url', 'created_at'
             ]);
         } else {
-            return $this->only('id', 'title', 'content', 'note', 'image_url', 'created_at');
+            return $this->where('id', $this['id'])->first([
+                'id', 'title', 'content', 'note', 'image_url', 'created_at'
+            ]);
         }
     }
 

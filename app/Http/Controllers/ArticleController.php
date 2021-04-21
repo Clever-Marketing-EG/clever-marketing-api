@@ -49,6 +49,7 @@ class ArticleController extends ResourcesController
      */
     public function show(Article $article): JsonResponse
     {
+//        dd($article->loadLocale());
         return response()->json([
             'success' => true,
             'data' => $article->loadLocale()
