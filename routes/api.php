@@ -7,6 +7,7 @@ use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\MailsController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\MemberProjectsController;
 use App\Http\Controllers\MetaController;
 use App\Http\Controllers\ProcessController;
 use App\Http\Controllers\ProjectController;
@@ -31,7 +32,8 @@ use Illuminate\Support\Facades\Route;
 */
 Route::apiResource('members', MemberController::class);
 Route::get('/dashboard/members/{member}',[MemberController::class, 'showFull'])->name('dashboard.members');
-//Route::get('/members/{member}/projects', [MemberController::class])
+Route::post('/members/{member}/projects', [MemberProjectsController::class, 'store'])->name('members.projects.store');
+Route::delete('/members/{member}/projects', [MemberProjectsController::class, 'destroy'])->name('members.projects.destroy');
 
 /*
 |--------------------------------------------------------------------------
