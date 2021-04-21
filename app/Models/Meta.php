@@ -24,12 +24,8 @@ class Meta extends Model
     public static function validate(Request $request): array
     {
         return $request->validate([
-            // 'position' => 'required|string|min:3',
-            // 'name' => 'required|string|min:3',
             'content' => 'required|string|min:3',
-            'content_ar' => 'required|string|min:3',
-            // 'type' => 'required|string|min:3|in:text,image',
-            // 'page' => 'required|string|min:3'
+            'content_ar' => 'required|string|min:3'
         ]);
 
     }
@@ -53,7 +49,7 @@ class Meta extends Model
      */
     public static function loadArabic()
     {
-        return Meta::select('id', 'position', 'name', 'content_ar', 'type', 'page')
+        return Meta::select('id', 'position', 'name', 'content_ar as content', 'type', 'page')
             ->get()
             ->toArray();
     }

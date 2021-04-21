@@ -96,6 +96,7 @@ Route::post('/images', [ImagesController::class, 'store'])->name('images.store')
 |--------------------------------------------------------------------------
 */
 Route::post('/mails/contact-us', [MailsController::class, 'contactUs'])->name('mails.contact');
+Route::post('/mails/job-application', [MailsController::class, 'jobApplication'])->name('mails.application');
 
 
 

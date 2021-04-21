@@ -112,7 +112,7 @@
                style="background:#dbae44;background-color:#dbae44;width:100%;">
             <tbody>
             <tr>
-            <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;vertical-align:top;">
+                <td style="direction:ltr;font-size:0px;padding:20px 0;text-align:center;vertical-align:top;">
                     <!--[if mso | IE]>
                     <table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td style="vertical-align:top;width:600px;">
                     <![endif]-->
@@ -134,7 +134,16 @@
                                     style="font-size:0px;padding:0px 25px;word-break:break-word;">
                                     <div
                                         style="color:white;font-family:'Droid Sans', 'Helvetica Neue', Arial, sans-serif;font-size:16px;line-height:20px;">
-                                        Subject: {{ $data['subject'] }}
+                                        Subject: New Job Application
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="left"
+                                    style="font-size:0px;padding:0px 25px;word-break:break-word;">
+                                    <div
+                                        style="color:white;font-family:'Droid Sans', 'Helvetica Neue', Arial, sans-serif;font-size:16px;line-height:20px;">
+                                        Job: {{ $data['job_title'] }}
                                     </div>
                                 </td>
                             </tr>
@@ -143,7 +152,7 @@
                                     style="font-size:0px;padding:10px 25px;word-break:break-word; padding-bottom: 2rem;">
                                     <div
                                         style="color:#000000;font-family:'Droid Sans', 'Helvetica Neue', Arial, sans-serif;font-size:20px;line-height:20px;text-align:center;">
-                                        {{ $data['message'] }}
+                                        {{ $data['message'] ?? '' }}
                                     </div>
                                 </td>
                             </tr>
@@ -156,7 +165,6 @@
                                     </div>
                                 </td>
                             </tr>
-
                             </tbody>
                         </table>
                     </div>
