@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 
@@ -14,6 +15,18 @@ class Member extends Model
     public $timestamps = false;
 
     protected $guarded = [];
+
+
+    /**
+     * Relationship with projects
+     *
+     * @return BelongsToMany
+     */
+    public function projects(): BelongsToMany
+    {
+        return $this->belongsToMany(Project::class);
+    }
+
 
     /**
      * Load Member by language
@@ -42,8 +55,8 @@ class Member extends Model
             'name_ar' => 'required|string|min:3',
             'job' => 'required|string|min:3',
             'job_ar' => 'required|string|min:3',
-            'profile' => 'string|min:3',
-            'profile_ar' => 'string|min:3',
+            'profile' => 'nullable|string|min:3',
+            'profile_ar' => 'nullable|string|min:3',
             'facebook' => 'required|string|url|min:3',
             'linkedin' => 'required|string|url|min:3',
             'image_url' => 'required|url',

@@ -19,7 +19,6 @@ class DatabaseSeeder extends Seeder
             ServiceSeeder::class,
             MemberSeeder::class,
             JobSeeder::class,
-            ProjectSeeder::class,
             ArticleSeeder::class
         ]);
     }

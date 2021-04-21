@@ -31,7 +31,7 @@ use Illuminate\Support\Facades\Route;
 */
 Route::apiResource('members', MemberController::class);
 Route::get('/dashboard/members/{member}',[MemberController::class, 'showFull'])->name('dashboard.members');
-
+//Route::get('/members/{member}/projects', [MemberController::class])
 
 /*
 |--------------------------------------------------------------------------
