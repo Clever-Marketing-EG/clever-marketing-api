@@ -14,6 +14,7 @@ class Member extends Model
 
     public $timestamps = false;
 
+
     protected $guarded = [];
 
 
@@ -36,9 +37,15 @@ class Member extends Model
         if(App::getLocale() === 'ar') {
             return $this->where('id', $this['id'])->first([
                 'id', 'name_ar as name', 'job_ar as job', 'profile_ar as profile', 'facebook', 'linkedin', 'image_url'
-            ]);
+            ])->load(['projects' => function($query) {
+                $query->select('title_ar as title', 'description_ar as description', 'image_url');
+            }]);
         } else {
-            return $this->only('id', 'name', 'job', 'profile', 'facebook', 'linkedin', 'image_url');
+            return $this->where('id', $this['id'])->first([
+                'id', 'name', 'job', 'profile', 'facebook', 'linkedin', 'image_url'
+            ])->load(['projects' => function($query) {
+                $query->select('title', 'description', 'image_url');
+            }]);
         }
 
     }

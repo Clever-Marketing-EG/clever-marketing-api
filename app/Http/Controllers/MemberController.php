@@ -66,7 +66,7 @@ class MemberController extends ResourcesController
     {
         return response()->json([
             'success' => true,
-            'data' => $member
+            'data' => $member->load('projects')
         ]);
     }
 
