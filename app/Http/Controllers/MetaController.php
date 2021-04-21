@@ -46,6 +46,19 @@ class MetaController extends ResourcesController
         ]);
     }
 
+  /**
+     * Display the specified resource.
+     *
+     * @param Meta $metum
+     * @return JsonResponse
+     */
+    public function show(Meta $metum): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $metum
+        ]);
+    }
 
     /**
      * Update the specified resource in storage.

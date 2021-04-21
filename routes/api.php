@@ -75,7 +75,10 @@ Route::get('/dashboard/articles/{article}',[ArticleController::class, 'showFull'
 */
 Route::apiResource('meta', MetaController::class)->only(['index', 'update']);
 Route::get('/dashboard/meta', [MetaController::class, 'fullIndex'])->name('dashboard.meta');
+Route::patch('/dashboard/meta/{metum}', [MetaController::class, 'update'])->name('dashboard.meta');
+Route::get('/dashboard/meta/{metum}', [MetaController::class, 'show'])->name('dashboard.meta');
 
+// Route::apiResource('/dashboard/meta', MetaController::class)->only(['fullIndex', 'update', 'show']);
 
 
 

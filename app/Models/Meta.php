@@ -24,12 +24,12 @@ class Meta extends Model
     public static function validate(Request $request): array
     {
         return $request->validate([
-            'position' => 'required|string|min:3',
-            'name' => 'required|string|min:3',
+            // 'position' => 'required|string|min:3',
+            // 'name' => 'required|string|min:3',
             'content' => 'required|string|min:3',
             'content_ar' => 'required|string|min:3',
-            'type' => 'required|string|min:3|in:text,image',
-            'page' => 'required|string|min:3'
+            // 'type' => 'required|string|min:3|in:text,image',
+            // 'page' => 'required|string|min:3'
         ]);
 
     }
