@@ -55,6 +55,21 @@ class ProjectController extends ResourcesController
         ]);
     }
 
+
+    /**
+     * Shows the full version of the project
+     *
+     * @param Project $project
+     * @return JsonResponse
+     */
+    public function showFull(Project $project): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $project
+        ]);
+    }
+
     /**
      * Update the specified resource in storage.
      *
