@@ -2,11 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af8ebf1-348a-41c7-9caa-00612b96a571" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/clever-marketing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/clever-marketing.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/commandlinetools/Laravel_4_10_21__1_28_PM.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/FieldController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Models/Field.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/FieldFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_24_092432_create_fields_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeders/FieldSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/MemberFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/MemberFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_12_135143_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_12_135143_create_projects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/MemberSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MemberSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -135,12 +140,17 @@
     </include_path>
   </component>
   <component name="ProjectId" id="1rUYsXeX9TWJohfAARRVY6LADMb" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -182,7 +192,7 @@
       <workItem from="1619032350338" duration="116000" />
       <workItem from="1619032482772" duration="90000" />
       <workItem from="1619107834863" duration="401000" />
-      <workItem from="1619255167630" duration="310000" />
+      <workItem from="1619255167630" duration="3019000" />
     </task>
     <servers />
   </component>
@@ -200,5 +210,8 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

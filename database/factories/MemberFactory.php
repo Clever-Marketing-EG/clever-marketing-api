@@ -32,7 +32,6 @@ class MemberFactory extends Factory
             'linkedin' => $this->faker->url,
             'image_url' => $this->faker->imageUrl(),
             'type' => $this->faker->randomElement(['tech', 'marketing', 'designers'])
-
         ];
     }
 }
