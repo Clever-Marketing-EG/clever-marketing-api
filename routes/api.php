@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
+use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FieldController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\JobController;
@@ -52,6 +53,16 @@ Route::apiResource('processes', ProcessController::class)->only('store', 'update
 */
 Route::apiResource('fields', FieldController::class);
 Route::get('/dashboard/fields/{field}',[FieldController::class, 'showFull'])->name('dashboard.fields');
+
+
+/*
+|--------------------------------------------------------------------------
+| Clients Routes
+|--------------------------------------------------------------------------
+*/
+Route::apiResource('clients', ClientController::class);
+Route::get('/dashboard/clients/{client}',[ClientController::class, 'showFull'])->name('dashboard.clients');
+
 
 
 /*

@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af8ebf1-348a-41c7-9caa-00612b96a571" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/ClientFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_24_110842_create_clients_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/ClientSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/clients.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/clients.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Field.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Field.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_12_135143_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_12_135143_create_projects_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Client.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Client.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/database/seeders/FieldSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/FieldSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -205,7 +203,7 @@
       <workItem from="1619032350338" duration="116000" />
       <workItem from="1619032482772" duration="90000" />
       <workItem from="1619107834863" duration="401000" />
-      <workItem from="1619255167630" duration="7798000" />
+      <workItem from="1619255167630" duration="9598000" />
     </task>
     <servers />
   </component>

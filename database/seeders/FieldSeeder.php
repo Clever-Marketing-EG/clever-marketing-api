@@ -4,7 +4,6 @@ namespace Database\Seeders;
 
 use App\Models\Client;
 use App\Models\Field;
-use App\Models\Member;
 use App\Models\Process;
 use App\Models\Project;
 use Illuminate\Database\Seeder;
