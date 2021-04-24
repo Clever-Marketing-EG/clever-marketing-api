@@ -36,7 +36,8 @@ class Project extends Model
             'image_url' => 'required|url',
             'additional_images_1' => 'required|url',
             'additional_images_2' => 'required|url',
-            'type' => 'required|in:web,branding,graphics'
+            'type' => 'required|in:web,branding,graphics',
+            'field_id' => 'required|integer|exists:fields,id'
         ]);
     }
 
