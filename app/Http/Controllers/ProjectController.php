@@ -16,12 +16,12 @@ class ProjectController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        $projects = Project::select('id', 'title', 'image_url', 'type')->get();
+        $projects = Project::select('id', 'title', 'image_url', 'type')->paginate(15)->toArray();
 
-        return response()->json([
-            'success' => true,
-            'data' => $projects
-        ]);
+        return response()->json(array_merge(
+            ['success' => true],
+            $projects
+        ));
     }
 
     /**
