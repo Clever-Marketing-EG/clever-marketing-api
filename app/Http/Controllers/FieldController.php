@@ -3,62 +3,96 @@
 namespace App\Http\Controllers;
 
 use App\Models\Field;
+use Exception;
+use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class FieldController extends Controller
+class FieldController extends ResourcesController
 {
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return JsonResponse
      */
-    public function index()
+    public function index(): JsonResponse
     {
-        //
+        return response()->json([
+            'success' => true,
+            'data' => trans('fields')
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @return JsonResponse
      */
-    public function store(Request $request)
+    public function store(Request $request): JsonResponse
     {
-        //
+        $validated = Field::validate($request);
+        $field = Field::create($validated);
+
+        return response()->json([
+            'success' => true,
+            'data' => $field
+        ], 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Field  $field
-     * @return \Illuminate\Http\Response
+     * @param Field $field
+     * @return JsonResponse
      */
-    public function show(Field $field)
+    public function show(Field $field): JsonResponse
     {
-        //
+        return response()->json([
+            'success' => true,
+            'data' => $field->loadLocale()
+        ]);
+    }
+
+    public function showFull(Field $field): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $field
+        ]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Field  $field
-     * @return \Illuminate\Http\Response
+     * @param Request $request
+     * @param Field $field
+     * @return JsonResponse
      */
-    public function update(Request $request, Field $field)
+    public function update(Request $request, Field $field): JsonResponse
     {
-        //
+        $validated = Field::validate($request);
+        $field->update($validated);
+
+        return response()->json([
+            'success' => true,
+            'data' => $field
+        ]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Field  $field
-     * @return \Illuminate\Http\Response
+     * @param Field $field
+     * @return JsonResponse
+     * @throws Exception
      */
-    public function destroy(Field $field)
+    public function destroy(Field $field): JsonResponse
     {
-        //
+        $field->delete();
+
+        return response()->json([
+            'success' => true,
+            'data' => $field
+        ]);
     }
 }

@@ -2,16 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af8ebf1-348a-41c7-9caa-00612b96a571" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/FieldController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Models/Field.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/FieldFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2021_04_24_092432_create_fields_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeders/FieldSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/ar/fields.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/lang/en/fields.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/MemberFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/MemberFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_04_12_135143_create_projects_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_04_12_135143_create_projects_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/MemberSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/MemberSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FieldController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FieldController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Field.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Field.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,10 +150,15 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/artisan" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/lang/en" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="MTHome" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\Clever Marketing\clever-marketing\resources\lang\en" />
+    </key>
   </component>
   <component name="RunManager" selected="PHP Script.Migrate and Seed">
     <configuration name="Development Server" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/artisan" scriptParameters="serve">
@@ -192,7 +193,7 @@
       <workItem from="1619032350338" duration="116000" />
       <workItem from="1619032482772" duration="90000" />
       <workItem from="1619107834863" duration="401000" />
-      <workItem from="1619255167630" duration="3019000" />
+      <workItem from="1619255167630" duration="5116000" />
     </task>
     <servers />
   </component>
