@@ -16,13 +16,12 @@ class MemberSeeder extends Seeder
      */
     public function run()
     {
-        Member::factory()
-            ->has(
-                Project::factory()
-                    ->has(Process::factory()->count(5))
-                    ->count(5)
-            )
-            ->count(10)
-            ->create();
+        Member::factory(50)->create();
+        for($i = 0; $i < 500; $i++) {
+            $project = Project::find(rand(1,50));
+            $member = Member::find(rand(1,50));
+
+            $member->projects()->save($project);
+        }
     }
 }

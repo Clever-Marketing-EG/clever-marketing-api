@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
+use App\Http\Controllers\FieldController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\MailsController;
@@ -42,6 +43,15 @@ Route::delete('/members/{member}/projects', [MemberProjectsController::class, 'd
 */
 Route::apiResource('projects', ProjectController::class);
 Route::apiResource('processes', ProcessController::class)->only('store', 'update', 'destroy');
+
+
+/*
+|--------------------------------------------------------------------------
+| Projects Routes
+|--------------------------------------------------------------------------
+*/
+Route::apiResource('fields', FieldController::class);
+Route::get('/dashboard/fields/{field}',[FieldController::class, 'showFull'])->name('dashboard.fields');
 
 
 /*

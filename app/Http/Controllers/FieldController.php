@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Project;
+use App\Models\Field;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class ProjectController extends ResourcesController
+class FieldController extends ResourcesController
 {
     /**
      * Display a listing of the resource.
@@ -16,12 +16,10 @@ class ProjectController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        $projects = Project::select('id', 'title', 'image_url', 'type')->paginate(15)->toArray();
-
-        return response()->json(array_merge(
-            ['success' => true],
-            $projects
-        ));
+        return response()->json([
+            'success' => true,
+            'data' => trans('fields')
+        ]);
     }
 
     /**
@@ -32,26 +30,34 @@ class ProjectController extends ResourcesController
      */
     public function store(Request $request): JsonResponse
     {
-        $validated = Project::validate($request);
-        $project = Project::create($validated);
+        $validated = Field::validate($request);
+        $field = Field::create($validated);
 
         return response()->json([
             'success' => true,
-            'data' => $project
+            'data' => $field
         ], 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param Project $project
+     * @param Field $field
      * @return JsonResponse
      */
-    public function show(Project $project): JsonResponse
+    public function show(Field $field): JsonResponse
     {
         return response()->json([
             'success' => true,
-            'data' => $project->loadLocale()
+            'data' => $field->loadLocale()
+        ]);
+    }
+
+    public function showFull(Field $field): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $field
         ]);
     }
 
@@ -59,34 +65,34 @@ class ProjectController extends ResourcesController
      * Update the specified resource in storage.
      *
      * @param Request $request
-     * @param Project $project
+     * @param Field $field
      * @return JsonResponse
      */
-    public function update(Request $request, Project $project): JsonResponse
+    public function update(Request $request, Field $field): JsonResponse
     {
-        $validated = Project::validate($request);
-        $project->update($validated);
+        $validated = Field::validate($request);
+        $field->update($validated);
 
         return response()->json([
             'success' => true,
-            'data' => $project
+            'data' => $field
         ]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param Project $project
+     * @param Field $field
      * @return JsonResponse
      * @throws Exception
      */
-    public function destroy(Project $project): JsonResponse
+    public function destroy(Field $field): JsonResponse
     {
-        $project->delete();
+        $field->delete();
 
         return response()->json([
             'success' => true,
-            'data' => $project
+            'data' => $field
         ]);
     }
 }
