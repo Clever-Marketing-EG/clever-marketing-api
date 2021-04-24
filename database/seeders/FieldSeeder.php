@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Client;
 use App\Models\Field;
 use App\Models\Member;
 use App\Models\Process;
@@ -22,6 +23,9 @@ class FieldSeeder extends Seeder
                 Project::factory()
                     ->has(Process::factory()->count(5))
                     ->count(5)
+            )
+            ->has(Client::factory()
+                ->count(5)
             )
             ->count(10)
             ->create();

@@ -21,6 +21,7 @@ class DatabaseSeeder extends Seeder
             ArticleSeeder::class,
             FieldSeeder::class,
             MemberSeeder::class,
+//            ClientSeeder::class
         ]);
     }
 }

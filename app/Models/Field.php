@@ -27,6 +27,15 @@ class Field extends Model
         return $this->hasMany(Project::class);
     }
 
+    /**
+     * Relates to Clients
+     *
+     * @return HasMany
+     */
+    public function clients(): HasMany
+    {
+        return $this->hasMany(Client::class);
+    }
 
     /**
      * Validates Field
