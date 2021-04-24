@@ -64,11 +64,20 @@ class Field extends Model
         if (App::getLocale() === 'ar') {
             return $this->where('id', $this['id'])->first([
                 'id', 'title_ar as title', 'description_ar as description', 'icon_url'
-            ]);
+            ])->load([
+                'projects' => function($query) {
+                    $query->select('title_ar as title', 'description_ar as description', 'image_url', 'field_id');
+                }, 'clients' => function($query) {
+                    $query->select('name_ar as name', 'icon_url', 'field_id');
+                }]);
         } else {
             return $this->where('id', $this['id'])->first([
                 'id', 'title', 'description', 'icon_url'
-            ]);
+            ])->load(['projects' => function($query) {
+                $query->select('id', 'title', 'description', 'image_url', 'field_id');
+            }, 'clients' => function($query) {
+                $query->select('name', 'icon_url', 'field_id');
+            }]);
         }
     }
 

@@ -31,6 +31,7 @@ class Client extends Model
         ]);
     }
 
+
     /**
      * Loads local version of the client
      *
@@ -49,6 +50,7 @@ class Client extends Model
         }
     }
 
+
     /**
      * Load arabic version of the clients
      *
@@ -60,6 +62,7 @@ class Client extends Model
             ->get()
             ->toArray();
     }
+
 
     /**
      * Load english version of the clients
