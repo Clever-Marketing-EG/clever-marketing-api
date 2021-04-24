@@ -24,7 +24,6 @@ class CreateProjectsTable extends Migration
             $table->string('additional_images_2');
             $table->enum('type', ['web', 'graphics', 'branding'])->default('web');
             $table->foreignId('field_id')->constrained()->onDelete('cascade');
-            $table->foreignId('client_id')->nullable()->constrained();
             $table->timestamps();
         });
     }

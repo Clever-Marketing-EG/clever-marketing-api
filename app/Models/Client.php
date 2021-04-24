@@ -27,7 +27,8 @@ class Client extends Model
         return $request->validate([
             'name' => 'required|string|min:3',
             'name_ar' => 'required|string|min:3',
-            'icon_url' => 'required|url'
+            'icon_url' => 'required|url',
+            'field_id' => 'required|integer|exists:fields,id'
         ]);
     }
 
