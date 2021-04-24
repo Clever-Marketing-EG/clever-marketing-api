@@ -538,6 +538,14 @@ class MetaSeeder extends Seeder
                 'type' => 'text',
                 'page' => 'projects'
             ],
+            [
+                'position' => 'Projects Page',
+                'name'=> 'clients_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'projects'
+            ],
 
         );
         $data = array_merge($contactData, $footerData, $homeData, $aboutData, $serviceData, $teamData, $fieldsData, $projectsData);
