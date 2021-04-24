@@ -359,7 +359,7 @@ class MetaSeeder extends Seeder
             [
                 'position' => 'Contact Page' ,
                 'name' => 'contact_mail',
-                'content' => 'Email',
+                'content' => 'example@example.com',
                 'content_ar' => 'example@example.com',
                 'type' => 'text',
                 'page' => 'contact'
@@ -516,9 +516,31 @@ class MetaSeeder extends Seeder
                 'type' => 'text',
                 'page' => 'team'
             ],
-        );
 
-        $data = array_merge($contactData, $footerData, $homeData, $aboutData, $serviceData, $teamData);
+        );
+        $fieldsData = array(
+            [
+                'position' => 'Fields Page',
+                'name'=> 'fields_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'fields'
+            ],
+
+        );
+        $projectsData = array(
+            [
+                'position' => 'Projects Page',
+                'name'=> 'projects_title',
+                'content' => 'Title !',
+                'content_ar' => 'محتوى',
+                'type' => 'text',
+                'page' => 'projects'
+            ],
+
+        );
+        $data = array_merge($contactData, $footerData, $homeData, $aboutData, $serviceData, $teamData, $fieldsData, $projectsData);
 
         DB::table('metas')->insert($data);
     }
