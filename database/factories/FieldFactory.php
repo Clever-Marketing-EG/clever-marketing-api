@@ -26,7 +26,8 @@ class FieldFactory extends Factory
             'title_ar' => $this->faker->sentence,
             'description' => $this->faker->text,
             'description_ar' => $this->faker->text,
-            'icon_url' => $this->faker->imageUrl()
+            'icon_url' => $this->faker->imageUrl(),
+            'image_url' => $this->faker->imageUrl()
         ];
     }
 }

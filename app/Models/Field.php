@@ -50,7 +50,9 @@ class Field extends Model
             'title_ar' => 'required|string|min:3',
             'description' => 'required|string|min:3',
             'description_ar' => 'required|string|min:3',
-            'icon_url' => 'required|url'
+            'icon_url' => 'required|url',
+            'image_url' => 'required|url'
+
         ]);
     }
 
@@ -63,7 +65,7 @@ class Field extends Model
     {
         if (App::getLocale() === 'ar') {
             return $this->where('id', $this['id'])->first([
-                'id', 'title_ar as title', 'description_ar as description', 'icon_url'
+                'id', 'title_ar as title', 'description_ar as description', 'icon_url', 'image_url'
             ])->load([
                 'projects' => function($query) {
                     $query->select('title_ar as title', 'description_ar as description', 'image_url', 'field_id');
@@ -82,13 +84,13 @@ class Field extends Model
     }
 
     public static function loadEnglish() {
-        return Field::select('id', 'title', 'description', 'icon_url')
+        return Field::select('id', 'title', 'description', 'icon_url',  'image_url')
             ->get()
             ->toArray();
     }
 
     public static function loadArabic() {
-        return Field::select('id', 'title_ar as title', 'description_ar as description', 'icon_url')
+        return Field::select('id', 'title_ar as title', 'description_ar as description', 'icon_url', 'image_url')
             ->get()
             ->toArray();
     }
