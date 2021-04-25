@@ -16,7 +16,24 @@ class ProjectController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        $projects = Project::select('id', 'title', 'image_url', 'type')->paginate(15)->toArray();
+        $projects = Project::select('id', 'title', 'image_url', 'type')->latest()->paginate(15)->toArray();
+
+        return response()->json(array_merge(
+            ['success' => true],
+            $projects
+        ));
+    }
+
+
+    /**
+     * Filters Projects by type
+     *
+     * @param $type
+     * @return JsonResponse
+     */
+    public function filter($type): JsonResponse
+    {
+        $projects = Project::select('id', 'title', 'image_url', 'type')->where('type', $type)->latest()->paginate(15)->toArray();
 
         return response()->json(array_merge(
             ['success' => true],
