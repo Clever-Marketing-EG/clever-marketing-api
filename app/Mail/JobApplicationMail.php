@@ -3,16 +3,15 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
+use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class ContactMail extends Mailable
+class JobApplicationMail extends Mailable
 {
     use Queueable, SerializesModels;
 
-
     public $data;
-
     /**
      * Create a new message instance.
      *
@@ -28,10 +27,10 @@ class ContactMail extends Mailable
      *
      * @return $this
      */
-    public function build(): ContactMail
+    public function build(): JobApplicationMail
     {
         return $this->from($this->data['email'])
-            ->subject($this->data['subject'])
-            ->view('mails.contact');
+            ->subject('New Job Application')
+            ->view('mails.application');
     }
 }

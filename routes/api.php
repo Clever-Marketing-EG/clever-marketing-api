@@ -3,11 +3,15 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
+use App\Http\Controllers\ClientController;
+use App\Http\Controllers\FieldController;
 use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\MailsController;
 use App\Http\Controllers\MemberController;
+use App\Http\Controllers\MemberProjectsController;
 use App\Http\Controllers\MetaController;
+use App\Http\Controllers\ProcessController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
@@ -30,14 +34,37 @@ use Illuminate\Support\Facades\Route;
 */
 Route::apiResource('members', MemberController::class);
 Route::get('/dashboard/members/{member}',[MemberController::class, 'showFull'])->name('dashboard.members');
+Route::post('/members/{member}/projects', [MemberProjectsController::class, 'store'])->name('members.projects.store');
+Route::delete('/members/{member}/projects', [MemberProjectsController::class, 'destroy'])->name('members.projects.destroy');
+
+/*
+|--------------------------------------------------------------------------
+| Projects Routes
+|--------------------------------------------------------------------------
+*/
+Route::get('/projects/filter/{type}', [ProjectController::class, 'filter']);
+Route::apiResource('projects', ProjectController::class);
+Route::get('/dashboard/projects/{project}', [ProjectController::class, 'showFull'])->name('dashboard.projects');
+Route::apiResource('processes', ProcessController::class)->only('store', 'update', 'destroy');
 
 
 /*
 |--------------------------------------------------------------------------
-| Members Routes
+| Projects Routes
 |--------------------------------------------------------------------------
 */
-Route::apiResource('projects', ProjectController::class);
+Route::apiResource('fields', FieldController::class);
+Route::get('/dashboard/fields/{field}',[FieldController::class, 'showFull'])->name('dashboard.fields');
+
+
+/*
+|--------------------------------------------------------------------------
+| Clients Routes
+|--------------------------------------------------------------------------
+*/
+Route::apiResource('clients', ClientController::class);
+Route::get('/dashboard/clients/{client}',[ClientController::class, 'showFull'])->name('dashboard.clients');
+
 
 
 /*
@@ -46,6 +73,7 @@ Route::apiResource('projects', ProjectController::class);
 |--------------------------------------------------------------------------
 */
 Route::apiResource('jobs', JobController::class);
+Route::get('/dashboard/jobs/{job}',[JobController::class, 'show'])->name('dashboard.jobs');
 
 
 /*
@@ -74,7 +102,10 @@ Route::get('/dashboard/articles/{article}',[ArticleController::class, 'showFull'
 */
 Route::apiResource('meta', MetaController::class)->only(['index', 'update']);
 Route::get('/dashboard/meta', [MetaController::class, 'fullIndex'])->name('dashboard.meta');
+Route::patch('/dashboard/meta/{metum}', [MetaController::class, 'update'])->name('dashboard.meta');
+Route::get('/dashboard/meta/{metum}', [MetaController::class, 'show'])->name('dashboard.meta');
 
+// Route::apiResource('/dashboard/meta', MetaController::class)->only(['fullIndex', 'update', 'show']);
 
 
 
@@ -92,6 +123,7 @@ Route::post('/images', [ImagesController::class, 'store'])->name('images.store')
 |--------------------------------------------------------------------------
 */
 Route::post('/mails/contact-us', [MailsController::class, 'contactUs'])->name('mails.contact');
+Route::post('/mails/job-application', [MailsController::class, 'jobApplication'])->name('mails.application');
 
 
 

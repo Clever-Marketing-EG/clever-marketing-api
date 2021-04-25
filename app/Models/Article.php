@@ -17,20 +17,18 @@ class Article extends Model
         'updated_at' => 'datetime:d M Y'
     ];
 
+
     /*Load Articles by language */
-    public function loadLocale(): array
+    public function loadLocale()
     {
         if (App::getLocale() === 'ar') {
-            return [
-                'id' => $this['id'],
-                'title' => $this['title_ar'],
-                'content' => $this['content_ar'],
-                'note' => $this['note_ar'],
-                'image_url' => $this['image_url'],
-                'created_at' => $this['created_at']
-            ];
+            return $this->where('id', $this['id'])->first([
+                'id', 'title_ar as title', 'content_ar as content', 'note_ar as note', 'image_url', 'created_at'
+            ]);
         } else {
-            return $this->only('id', 'title', 'content', 'note', 'image_url', 'created_at');
+            return $this->where('id', $this['id'])->first([
+                'id', 'title', 'content', 'note', 'image_url', 'created_at'
+            ]);
         }
     }
 
@@ -47,8 +45,8 @@ class Article extends Model
             'title_ar' => 'required|string|min:3',
             'content' => 'required|string|min:3',
             'content_ar' => 'required|string|min:3',
-            'note' => 'string|min:3',
-            'note_ar' => 'string|min:3',
+            'note' => 'string|min:3|nullable',
+            'note_ar' => 'string|min:3|nullable',
             'image_url' => 'required|url'
         ]);
     }
@@ -60,10 +58,13 @@ class Article extends Model
         ->toArray();
 
     }
+
+
     public static function loadArabic(){
         return Article::select('id', 'title_ar as title', 'content_ar as content', 'note_ar as note', 'image_url', 'created_at')
         ->latest()
         ->paginate(5)
         ->toArray();
     }
+
 }

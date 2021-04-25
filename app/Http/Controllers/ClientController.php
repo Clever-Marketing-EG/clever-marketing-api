@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
+use App\Models\Client;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class ArticleController extends ResourcesController
+class ClientController extends ResourcesController
 {
     /**
      * Display a listing of the resource.
@@ -16,57 +16,57 @@ class ArticleController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        $articles = trans('articles');
-
-        return response()->json(array_merge(
-            ['success' => true],
-            $articles
-        ));
+        return response()->json([
+            'success' => true,
+            'data' => trans('clients')
+        ]);
     }
+
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param Request $request
      * @return JsonResponse
      */
     public function store(Request $request): JsonResponse
     {
-        $validated = Article::validate($request);
-        $article = Article::create($validated);
+        $validated = Client::validate($request);
+        $client = Client::create($validated);
 
         return response()->json([
             'success' => true,
-            'data' => $article
+            'data' => $client
         ], 201);
     }
+
 
     /**
      * Display the specified resource.
      *
-     * @param  Article  $article
+     * @param Client $client
      * @return JsonResponse
      */
-    public function show(Article $article): JsonResponse
+    public function show(Client $client): JsonResponse
     {
-//        dd($article->loadLocale());
         return response()->json([
             'success' => true,
-            'data' => $article->loadLocale()
+            'data' => $client->loadLocale()
         ]);
     }
 
+
     /**
-     * Show full data of the resource
+     * Shows the full version of the client for dashboard display
      *
-     * @param Article $article
+     * @param Client $client
      * @return JsonResponse
      */
-    public function showFull(Article $article): JsonResponse
+    public function showFull(Client $client): JsonResponse
     {
         return response()->json([
             'success' => true,
-            'data' => $article
+            'data' => $client
         ]);
     }
 
@@ -74,35 +74,36 @@ class ArticleController extends ResourcesController
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  Article  $article
+     * @param Request $request
+     * @param Client $client
      * @return JsonResponse
      */
-    public function update(Request $request, Article $article): JsonResponse
+    public function update(Request $request, Client $client): JsonResponse
     {
-        $validated = Article::validate($request);
-        $article->update($validated);
+        $validated = Client::validate($request);
+        $client->update($validated);
 
         return response()->json([
             'success' => true,
-            'data' => $article
+            'data' => $client
         ]);
     }
+
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param Article $article
+     * @param Client $client
      * @return JsonResponse
      * @throws Exception
      */
-    public function destroy(Article $article): JsonResponse
+    public function destroy(Client $client): JsonResponse
     {
-        $article->delete();
+        $client->delete();
 
         return response()->json([
             'success' => true,
-            'data' => $article,
+            'data' => $client
         ]);
     }
 }

@@ -2,12 +2,12 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Article;
+use App\Models\Field;
 use Exception;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 
-class ArticleController extends ResourcesController
+class FieldController extends ResourcesController
 {
     /**
      * Display a listing of the resource.
@@ -16,93 +16,83 @@ class ArticleController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        $articles = trans('articles');
-
-        return response()->json(array_merge(
-            ['success' => true],
-            $articles
-        ));
+        return response()->json([
+            'success' => true,
+            'data' => trans('fields')
+        ]);
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  Request  $request
+     * @param Request $request
      * @return JsonResponse
      */
     public function store(Request $request): JsonResponse
     {
-        $validated = Article::validate($request);
-        $article = Article::create($validated);
+        $validated = Field::validate($request);
+        $field = Field::create($validated);
 
         return response()->json([
             'success' => true,
-            'data' => $article
+            'data' => $field
         ], 201);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  Article  $article
+     * @param Field $field
      * @return JsonResponse
      */
-    public function show(Article $article): JsonResponse
-    {
-//        dd($article->loadLocale());
-        return response()->json([
-            'success' => true,
-            'data' => $article->loadLocale()
-        ]);
-    }
-
-    /**
-     * Show full data of the resource
-     *
-     * @param Article $article
-     * @return JsonResponse
-     */
-    public function showFull(Article $article): JsonResponse
+    public function show(Field $field): JsonResponse
     {
         return response()->json([
             'success' => true,
-            'data' => $article
+            'data' => $field->loadLocale()
         ]);
     }
 
+    public function showFull(Field $field): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $field
+        ]);
+    }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  Request  $request
-     * @param  Article  $article
+     * @param Request $request
+     * @param Field $field
      * @return JsonResponse
      */
-    public function update(Request $request, Article $article): JsonResponse
+    public function update(Request $request, Field $field): JsonResponse
     {
-        $validated = Article::validate($request);
-        $article->update($validated);
+        $validated = Field::validate($request);
+        $field->update($validated);
 
         return response()->json([
             'success' => true,
-            'data' => $article
+            'data' => $field
         ]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param Article $article
+     * @param Field $field
      * @return JsonResponse
      * @throws Exception
      */
-    public function destroy(Article $article): JsonResponse
+    public function destroy(Field $field): JsonResponse
     {
-        $article->delete();
+        $field->delete();
 
         return response()->json([
             'success' => true,
-            'data' => $article,
+            'data' => $field
         ]);
     }
 }
