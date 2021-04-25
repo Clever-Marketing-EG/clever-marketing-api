@@ -1,5 +1,6 @@
 <?php
 
+
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -20,6 +21,7 @@ class CreateFieldsTable extends Migration
             $table->text('description');
             $table->text('description_ar');
             $table->string('icon_url');
+            $table->string('image_url');
         });
     }
 
