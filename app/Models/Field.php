@@ -74,7 +74,7 @@ class Field extends Model
                 }]);
         } else {
             return $this->where('id', $this['id'])->first([
-                'id', 'title', 'description', 'icon_url'
+                'id', 'title', 'description', 'icon_url' ,'image_url'
             ])->load(['projects' => function($query) {
                 $query->select('id', 'title', 'description', 'image_url', 'field_id');
             }, 'clients' => function($query) {
