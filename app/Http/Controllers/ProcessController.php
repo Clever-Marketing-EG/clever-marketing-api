@@ -9,6 +9,20 @@ use Illuminate\Http\Request;
 
 class ProcessController extends ResourcesController
 {
+        /**
+     * Display the specified resource.
+     *
+     * @param Process $process
+     * @return JsonResponse
+     */
+    public function show( Process $process): JsonResponse
+    {
+        return response()->json([
+            'success' => true,
+            'data' => $process
+        ]);
+    }
+
 
     /**
      * Store a newly created resource in storage.
