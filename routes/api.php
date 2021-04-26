@@ -46,6 +46,7 @@ Route::get('/projects/filter/{type}', [ProjectController::class, 'filter']);
 Route::apiResource('projects', ProjectController::class);
 Route::get('/dashboard/projects/{project}', [ProjectController::class, 'showFull'])->name('dashboard.projects');
 Route::apiResource('processes', ProcessController::class)->only('store', 'update', 'destroy','show');
+Route::get('/dashboard/processes/{process}', [ProcessController::class, 'show']);
 
 
 /*
