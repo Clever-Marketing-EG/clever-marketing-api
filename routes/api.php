@@ -13,6 +13,7 @@ use App\Http\Controllers\MemberProjectsController;
 use App\Http\Controllers\MetaController;
 use App\Http\Controllers\ProcessController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -93,6 +94,7 @@ Route::get('/dashboard/services/{service}',[ServiceController::class, 'showFull'
 */
 Route::apiResource('articles', ArticleController::class);
 Route::get('/dashboard/articles/{article}',[ArticleController::class, 'showFull'])->name('dashboard.articles');
+Route::get('articles/search/{searchTerm}', [SearchController::class, 'articles'])->name('search.articles');
 
 
 
