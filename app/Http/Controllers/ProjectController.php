@@ -87,7 +87,9 @@ class ProjectController extends ResourcesController
     {
         return response()->json([
             'success' => true,
-            'data' => $project
+            'data' => $project->load(['processes' => function ($query) {
+                $query->select('id', 'project_id', 'title', 'description','title_ar', 'description_ar', 'image_url');
+            }])
         ]);
     }
 
