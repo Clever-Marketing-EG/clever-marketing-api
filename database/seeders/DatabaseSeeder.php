@@ -16,11 +16,11 @@ class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             MetaSeeder::class,
-            ServiceSeeder::class,
-            JobSeeder::class,
-            ArticleSeeder::class,
-            FieldSeeder::class,
-            MemberSeeder::class,
+            // ServiceSeeder::class,
+            // JobSeeder::class,
+            // ArticleSeeder::class,
+            // FieldSeeder::class,
+            // MemberSeeder::class,
 //            ClientSeeder::class,
 //            ProjectSeeder::class
         ]);
