@@ -13,6 +13,7 @@ use App\Http\Controllers\MemberProjectsController;
 use App\Http\Controllers\MetaController;
 use App\Http\Controllers\ProcessController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
 
@@ -45,7 +46,8 @@ Route::delete('/members/{member}/projects', [MemberProjectsController::class, 'd
 Route::get('/projects/filter/{type}', [ProjectController::class, 'filter']);
 Route::apiResource('projects', ProjectController::class);
 Route::get('/dashboard/projects/{project}', [ProjectController::class, 'showFull'])->name('dashboard.projects');
-Route::apiResource('processes', ProcessController::class)->only('store', 'update', 'destroy');
+Route::apiResource('processes', ProcessController::class)->except('index');
+Route::get('/dashboard/processes/{process}', [ProcessController::class, 'show']);
 
 
 /*
@@ -92,6 +94,7 @@ Route::get('/dashboard/services/{service}',[ServiceController::class, 'showFull'
 */
 Route::apiResource('articles', ArticleController::class);
 Route::get('/dashboard/articles/{article}',[ArticleController::class, 'showFull'])->name('dashboard.articles');
+Route::get('articles/search/{searchTerm}', [SearchController::class, 'articles'])->name('search.articles');
 
 
 

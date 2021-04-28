@@ -2,4 +2,4 @@
 
 use App\Models\Client;
 
-return Client::loadEnglish();
+return ['data' => Client::loadEnglish()];

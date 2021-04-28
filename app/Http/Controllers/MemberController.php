@@ -16,12 +16,10 @@ class MemberController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        $members = trans('members');
-
-        return response()->json([
-            'success' => true,
-            'data' => $members,
-        ]);
+        return response()->json(array_merge(
+            ['success' => true],
+            trans('members')
+        ));
     }
 
     /**

@@ -1,7 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3af8ebf1-348a-41c7-9caa-00612b96a571" name="Default Changelist" comment="" />
+    <list default="true" id="3af8ebf1-348a-41c7-9caa-00612b96a571" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FieldController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FieldController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/clients.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/fields.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/fields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/members.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/members.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/ar/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/articles.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/clients.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/fields.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/fields.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/members.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/members.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/meta.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/lang/en/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -161,7 +181,7 @@
       <recent name="E:\Clever Marketing\clever-marketing\resources\lang\en" />
     </key>
   </component>
-  <component name="RunManager" selected="PHP Script.Development Server">
+  <component name="RunManager" selected="PHP Script.Migrate and Seed">
     <configuration name="Development Server" type="PhpLocalRunConfigurationType" factoryName="PHP Console" path="$PROJECT_DIR$/artisan" scriptParameters="serve">
       <CommandLine>
         <PhpTestInterpreterSettings>

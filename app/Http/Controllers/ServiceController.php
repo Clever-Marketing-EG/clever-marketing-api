@@ -16,12 +16,11 @@ class ServiceController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        $services = trans('services');
 
-        return response()->json([
-            'success' => true,
-            'data' => $services
-        ]);
+        return response()->json(array_merge(
+            ['success' => true],
+            trans('services')
+        ));
     }
 
     /**

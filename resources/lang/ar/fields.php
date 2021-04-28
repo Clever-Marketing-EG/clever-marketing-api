@@ -2,4 +2,4 @@
 
 use App\Models\Field;
 
-return Field::loadArabic();
+return ['data' => Field::loadArabic()];
