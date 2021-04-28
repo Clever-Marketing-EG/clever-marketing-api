@@ -2,4 +2,4 @@
 
 use App\Models\Article;
 
-return Article::loadEnglish();
+return ['data' => Article::loadEnglish()];

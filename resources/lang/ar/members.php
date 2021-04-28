@@ -2,4 +2,4 @@
 
 use App\Models\Member;
 
-return Member::loadArabic();
+return ['data' => Member::loadArabic()];

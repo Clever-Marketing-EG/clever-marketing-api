@@ -3,4 +3,4 @@
 
 use App\Models\Service;
 
-return Service::loadArabic();
+return [ 'data' => Service::loadArabic()];

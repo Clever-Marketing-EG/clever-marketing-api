@@ -16,10 +16,10 @@ class FieldController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        return response()->json([
-            'success' => true,
-            'data' => trans('fields')
-        ]);
+        return response()->json(array_merge(
+            ['success' => true],
+            trans('fields')
+        ));
     }
 
     /**

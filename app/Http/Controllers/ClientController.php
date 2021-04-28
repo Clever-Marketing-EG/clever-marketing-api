@@ -16,10 +16,10 @@ class ClientController extends ResourcesController
      */
     public function index(): JsonResponse
     {
-        return response()->json([
-            'success' => true,
-            'data' => trans('clients')
-        ]);
+        return response()->json(array_merge(
+            ['success' => true],
+            trans('clients')
+        ));
     }
 
 

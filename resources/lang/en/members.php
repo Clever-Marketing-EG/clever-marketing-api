@@ -2,4 +2,4 @@
 
 use App\Models\Member;
 
-return Member::loadEnglish();
+return ['data' => Member::loadEnglish()];

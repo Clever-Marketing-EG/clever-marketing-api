@@ -2,4 +2,4 @@
 
 use App\Models\Client;
 
-return Client::loadArabic();
+return [ 'data' => Client::loadArabic()];

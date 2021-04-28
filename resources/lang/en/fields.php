@@ -2,4 +2,4 @@
 
 use App\Models\Field;
 
-return Field::loadEnglish();
+return ['data' => Field::loadEnglish()];

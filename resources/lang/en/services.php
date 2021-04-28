@@ -3,4 +3,4 @@
 
 use App\Models\Service;
 
-return Service::loadEnglish();
+return ['data' => Service::loadEnglish()];
