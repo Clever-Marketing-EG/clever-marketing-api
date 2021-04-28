@@ -3,4 +3,4 @@
 use App\Models\Article;
 
 // return Article::loadArabic();
-return ['data' => Article::loadEnglish()];
+return ['data' => Article::loadArabic()];
