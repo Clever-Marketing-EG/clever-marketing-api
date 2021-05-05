@@ -24,6 +24,20 @@ class ProjectController extends ResourcesController
         ));
     }
 
+    /**
+     * Shows full index
+     * @return JsonResponse
+     */
+    public function fullIndex(): JsonResponse
+    {
+        $projects = Project::all();
+
+        return response()->json([
+            'success' => true,
+            'data' => $projects
+        ]);
+    }
+
 
     /**
      * Filters Projects by type

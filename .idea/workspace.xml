@@ -2,24 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3af8ebf1-348a-41c7-9caa-00612b96a571" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/FilesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/clever-marketing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/clever-marketing.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ClientController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FieldController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FieldController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MemberController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ServiceController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/articles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/clients.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/fields.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/fields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/members.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/members.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/ar/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/ar/services.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/articles.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/articles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/clients.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/clients.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/fields.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/fields.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/members.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/members.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/meta.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/meta.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/lang/en/services.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/lang/en/services.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImagesController.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MetaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MetaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -162,7 +150,6 @@
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
@@ -216,6 +203,8 @@
       <workItem from="1619107834863" duration="401000" />
       <workItem from="1619255167630" duration="13843000" />
       <workItem from="1619343321762" duration="4375000" />
+      <workItem from="1620205022361" duration="89000" />
+      <workItem from="1620205213949" duration="2332000" />
     </task>
     <servers />
   </component>

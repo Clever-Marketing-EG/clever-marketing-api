@@ -5,7 +5,7 @@ use App\Http\Controllers\Auth\AuthController;
 use App\Http\Controllers\Auth\PasswordResetLinkController;
 use App\Http\Controllers\ClientController;
 use App\Http\Controllers\FieldController;
-use App\Http\Controllers\ImagesController;
+use App\Http\Controllers\FilesController;
 use App\Http\Controllers\JobController;
 use App\Http\Controllers\MailsController;
 use App\Http\Controllers\MemberController;
@@ -34,29 +34,38 @@ use Illuminate\Support\Facades\Route;
 |--------------------------------------------------------------------------
 */
 Route::apiResource('members', MemberController::class);
-Route::get('/dashboard/members/{member}',[MemberController::class, 'showFull'])->name('dashboard.members');
+Route::get('/dashboard/members/{member}',[MemberController::class, 'showFull'])->name('dashboard.members.show');
 Route::post('/members/{member}/projects', [MemberProjectsController::class, 'store'])->name('members.projects.store');
 Route::delete('/members/{member}/projects', [MemberProjectsController::class, 'destroy'])->name('members.projects.destroy');
 
+
 /*
 |--------------------------------------------------------------------------
 | Projects Routes
 |--------------------------------------------------------------------------
 */
-Route::get('/projects/filter/{type}', [ProjectController::class, 'filter']);
 Route::apiResource('projects', ProjectController::class);
-Route::get('/dashboard/projects/{project}', [ProjectController::class, 'showFull'])->name('dashboard.projects');
-Route::apiResource('processes', ProcessController::class)->except('index');
-Route::get('/dashboard/processes/{process}', [ProcessController::class, 'show']);
+Route::get('/projects/filter/{type}', [ProjectController::class, 'filter']);
+Route::get('/dashboard/projects', [ProjectController::class, 'fullIndex'])->name('dashboard.projects.index');
+Route::get('/dashboard/projects/{project}', [ProjectController::class, 'showFull'])->name('dashboard.projects.show');
 
 
 /*
 |--------------------------------------------------------------------------
-| Projects Routes
+| Processes Routes
+|--------------------------------------------------------------------------
+*/
+Route::apiResource('processes', ProcessController::class)->except('index');
+Route::get('/dashboard/processes/{process}', [ProcessController::class, 'show'])->name('dashboard.processes.show');
+
+
+/*
+|--------------------------------------------------------------------------
+| Fields Routes
 |--------------------------------------------------------------------------
 */
 Route::apiResource('fields', FieldController::class);
-Route::get('/dashboard/fields/{field}',[FieldController::class, 'showFull'])->name('dashboard.fields');
+Route::get('/dashboard/fields/{field}',[FieldController::class, 'showFull'])->name('dashboard.fields.show');
 
 
 /*
@@ -65,7 +74,7 @@ Route::get('/dashboard/fields/{field}',[FieldController::class, 'showFull'])->na
 |--------------------------------------------------------------------------
 */
 Route::apiResource('clients', ClientController::class);
-Route::get('/dashboard/clients/{client}',[ClientController::class, 'showFull'])->name('dashboard.clients');
+Route::get('/dashboard/clients/{client}',[ClientController::class, 'showFull'])->name('dashboard.clients.show');
 
 
 
@@ -75,7 +84,7 @@ Route::get('/dashboard/clients/{client}',[ClientController::class, 'showFull'])-
 |--------------------------------------------------------------------------
 */
 Route::apiResource('jobs', JobController::class);
-Route::get('/dashboard/jobs/{job}',[JobController::class, 'show'])->name('dashboard.jobs');
+Route::get('/dashboard/jobs/{job}',[JobController::class, 'show'])->name('dashboard.jobs.show');
 
 
 /*
@@ -84,7 +93,7 @@ Route::get('/dashboard/jobs/{job}',[JobController::class, 'show'])->name('dashbo
 |--------------------------------------------------------------------------
 */
 Route::apiResource('services', ServiceController::class);
-Route::get('/dashboard/services/{service}',[ServiceController::class, 'showFull'])->name('dashboard.services');
+Route::get('/dashboard/services/{service}',[ServiceController::class, 'showFull'])->name('dashboard.services.show');
 
 
 /*
@@ -93,7 +102,7 @@ Route::get('/dashboard/services/{service}',[ServiceController::class, 'showFull'
 |--------------------------------------------------------------------------
 */
 Route::apiResource('articles', ArticleController::class);
-Route::get('/dashboard/articles/{article}',[ArticleController::class, 'showFull'])->name('dashboard.articles');
+Route::get('/dashboard/articles/{article}',[ArticleController::class, 'showFull'])->name('dashboard.articles.show');
 Route::get('articles/search/{searchTerm}', [SearchController::class, 'articles'])->name('search.articles');
 
 
@@ -104,20 +113,18 @@ Route::get('articles/search/{searchTerm}', [SearchController::class, 'articles']
 |--------------------------------------------------------------------------
 */
 Route::apiResource('meta', MetaController::class)->only(['index', 'update']);
-Route::get('/dashboard/meta', [MetaController::class, 'fullIndex'])->name('dashboard.meta');
-Route::patch('/dashboard/meta/{metum}', [MetaController::class, 'update'])->name('dashboard.meta');
-Route::get('/dashboard/meta/{metum}', [MetaController::class, 'show'])->name('dashboard.meta');
-
-// Route::apiResource('/dashboard/meta', MetaController::class)->only(['fullIndex', 'update', 'show']);
+Route::get('/dashboard/meta', [MetaController::class, 'fullIndex'])->name('dashboard.meta.index');
+Route::get('/dashboard/meta/{metum}', [MetaController::class, 'show'])->name('dashboard.meta.show');
 
 
 
 /*
 |--------------------------------------------------------------------------
-| Images Routes
+| Files Routes
 |--------------------------------------------------------------------------
 */
-Route::post('/images', [ImagesController::class, 'store'])->name('images.store');
+Route::post('/images', [FilesController::class, 'images'])->name('images.store');
+Route::post('/resumes', [FilesController::class, 'resumes'])->name('resumes.store');
 
 
 /*

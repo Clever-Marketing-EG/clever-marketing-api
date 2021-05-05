@@ -46,7 +46,7 @@ class MetaController extends ResourcesController
         ]);
     }
 
-  /**
+    /**
      * Display the specified resource.
      *
      * @param Meta $metum
