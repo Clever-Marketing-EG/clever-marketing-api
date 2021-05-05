@@ -28,7 +28,7 @@ class JobApplicationMail extends Mailable
      */
     public function build(): JobApplicationMail
     {
-        return $this->from($this->data['email'])
+        return $this->from(MAIL_SENDER)
             ->subject('New Job Application')
             ->view('mails.application')
             ->attachData($this->data['resume'], 'resume.pdf', [

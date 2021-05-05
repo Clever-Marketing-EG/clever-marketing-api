@@ -3,10 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3af8ebf1-348a-41c7-9caa-00612b96a571" name="Default Changelist" comment="Add enhanced route for job applications">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FilesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MailsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MailsController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Mail/JobApplicationMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/JobApplicationMail.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config/mail.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/mail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/mails/application.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/mails/application.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -202,7 +201,7 @@
       <workItem from="1619255167630" duration="13843000" />
       <workItem from="1619343321762" duration="4375000" />
       <workItem from="1620205022361" duration="89000" />
-      <workItem from="1620205213949" duration="4949000" />
+      <workItem from="1620205213949" duration="5195000" />
     </task>
     <task id="LOCAL-00001" summary="Add a route to upload resumes">
       <created>1620207581950</created>
@@ -211,7 +210,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620207581950</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Add enhanced route for job applications">
+      <created>1620212107733</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620212107733</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

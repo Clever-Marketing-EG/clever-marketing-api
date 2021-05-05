@@ -2,6 +2,7 @@
 
 define('MAIL_TO', env('MAIL_RECEIVER', 'tech@clevermarketing-eg.com'));
 define('MAIL_FROM', env('MAIL_FROM', 'info@clevermarketing-eg.com'));
+define('MAIL_SENDER', env('MAIL_SENDER', 'noreply@clevermarketing-eg.com'));
 
 return [
 
