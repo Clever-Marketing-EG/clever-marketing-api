@@ -13,10 +13,21 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
+
+// Route::get('/deploy', function () {
+//     // exec('composer install --optimize-autoloader --no-dev');
+//     // exec('npm install');
+//     Artisan::call('storage:link');
+//     // Artisan::call('migrate:fresh', ['--seed' => true]);
+//     // Artisan::call('config:cache');
+//     // Artisan::call('view:cache');
+//     // Artisan::call('route:cache');
+//     return 'done';
+// });
 
 Route::fallback(function () {
    return response()->json([
