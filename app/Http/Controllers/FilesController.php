@@ -32,25 +32,4 @@ class FilesController extends Controller
             'image_url' => asset('storage/' . $path)
         ]);
     }
-
-
-    /**
-     * Upload a resume
-     *
-     * @param Request $request
-     * @return JsonResponse
-     */
-    public function resumes(Request $request): JsonResponse
-    {
-        $request->validate([
-            'resume'=> 'required|max:10000|mimes:doc,docx,pdf',
-        ]);
-
-        $path = $request->file('resume')->store('resumes', 'public');
-
-        return response()->json([
-            'success' => true,
-            'resume_url' => asset('storage/' . $path)
-        ]);
-    }
 }

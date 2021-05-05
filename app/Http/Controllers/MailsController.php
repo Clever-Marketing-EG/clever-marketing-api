@@ -33,7 +33,8 @@ class MailsController extends Controller
             'job_title' => 'required|string|min:3',
             'from' => 'required|string|min:3',
             'email' => 'required|email|string|min:3',
-            'message' => 'nullable|string'
+            'message' => 'nullable|string',
+            'resume'=> 'required|max:10000|mimes:doc,docx,pdf',
         ]);
 
 

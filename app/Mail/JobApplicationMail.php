@@ -3,7 +3,6 @@
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
-use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
@@ -31,6 +30,9 @@ class JobApplicationMail extends Mailable
     {
         return $this->from($this->data['email'])
             ->subject('New Job Application')
-            ->view('mails.application');
+            ->view('mails.application')
+            ->attachData($this->data['resume'], 'resume.pdf', [
+                'mime' => 'application/pdf',
+            ]);
     }
 }

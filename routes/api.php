@@ -124,7 +124,6 @@ Route::get('/dashboard/meta/{metum}', [MetaController::class, 'show'])->name('da
 |--------------------------------------------------------------------------
 */
 Route::post('/images', [FilesController::class, 'images'])->name('images.store');
-Route::post('/resumes', [FilesController::class, 'resumes'])->name('resumes.store');
 
 
 /*

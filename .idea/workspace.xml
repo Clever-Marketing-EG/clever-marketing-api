@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="3af8ebf1-348a-41c7-9caa-00612b96a571" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/FilesController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/clever-marketing.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/clever-marketing.iml" afterDir="false" />
+    <list default="true" id="3af8ebf1-348a-41c7-9caa-00612b96a571" name="Default Changelist" comment="Add enhanced route for job applications">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ImagesController.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MetaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MetaController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ProjectController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/FilesController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/FilesController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/MailsController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/MailsController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Mail/JobApplicationMail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Mail/JobApplicationMail.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/api.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/api.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -204,8 +202,16 @@
       <workItem from="1619255167630" duration="13843000" />
       <workItem from="1619343321762" duration="4375000" />
       <workItem from="1620205022361" duration="89000" />
-      <workItem from="1620205213949" duration="2332000" />
+      <workItem from="1620205213949" duration="4949000" />
     </task>
+    <task id="LOCAL-00001" summary="Add a route to upload resumes">
+      <created>1620207581950</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620207581950</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -225,5 +231,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Add a route to upload resumes" />
+    <MESSAGE value="Add enhanced route for job applications" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add enhanced route for job applications" />
   </component>
 </project>
