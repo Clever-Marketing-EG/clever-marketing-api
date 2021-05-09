@@ -37,8 +37,10 @@ class MailsController extends Controller
             'resume'=> 'required|max:10000|mimes:doc,docx,pdf',
         ]);
 
-
-        Mail::to(MAIL_TO)->send(new JobApplicationMail($data));
+        $fileName = $request->file('resume')->getClientOriginalName();
+        $path = $request->file('resume')->storeAs('resumes', $fileName);
+//        dd('hi');
+        Mail::to(MAIL_TO)->send(new JobApplicationMail($data, $path));
 
         return response()->json([
             'success' => true,

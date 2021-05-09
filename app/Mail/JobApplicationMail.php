@@ -11,14 +11,18 @@ class JobApplicationMail extends Mailable
     use Queueable, SerializesModels;
 
     public $data;
+
+    public $path;
+
     /**
      * Create a new message instance.
      *
      * @return void
      */
-    public function __construct($data)
+    public function __construct($data, $path)
     {
         $this->data = $data;
+        $this->path = $path;
     }
 
     /**
@@ -28,11 +32,10 @@ class JobApplicationMail extends Mailable
      */
     public function build(): JobApplicationMail
     {
+//        dd($this->path);
         return $this->from(MAIL_SENDER)
             ->subject('New Job Application')
             ->view('mails.application')
-            ->attachData($this->data['resume'], 'resume.pdf', [
-                'mime' => 'application/pdf',
-            ]);
+            ->attachFromStorage($this->path);
     }
 }
