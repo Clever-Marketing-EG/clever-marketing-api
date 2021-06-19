@@ -39,7 +39,7 @@ class MailsController extends Controller
 
         $fileName = $request->file('resume')->getClientOriginalName();
         $path = $request->file('resume')->storeAs('resumes', $fileName);
-//        dd('hi');
+
         Mail::to(MAIL_TO)->send(new JobApplicationMail($data, $path));
 
         return response()->json([
