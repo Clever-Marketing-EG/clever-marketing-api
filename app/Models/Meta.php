@@ -5,6 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 
+/**
+ * @method static page(mixed $page)
+ */
 class Meta extends LocalizableModel
 {
     use HasFactory;
@@ -28,5 +31,9 @@ class Meta extends LocalizableModel
             'content' => 'required|string|min:3',
             'content_ar' => 'required|string|min:3'
         ]);
+    }
+
+    public function scopePage($query, $page) {
+        return $page ? $query->where('page', $page) : $query;
     }
 }

@@ -11,11 +11,13 @@ class MetaController extends ResourcesController
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @return JsonResponse
      */
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        $meta = Meta::all();
+        $meta = Meta::page($request['page'])->get();
+
         return response()->json([
             'success' => true,
             'data' => $meta
