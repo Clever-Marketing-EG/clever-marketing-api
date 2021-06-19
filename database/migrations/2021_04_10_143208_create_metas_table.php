@@ -17,7 +17,7 @@ class CreateMetasTable extends Migration
             $table->id();
             $table->string('position');
             $table->string('name');
-            $table->text('content');
+            $table->text('content_en');
             $table->text('content_ar');
             $table->enum('type', ['text', 'image']);
             $table->string('page');
