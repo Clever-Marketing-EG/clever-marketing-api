@@ -19,14 +19,14 @@ use Illuminate\Support\Facades\Route;
 
 
 // Route::get('/deploy', function () {
-//     // exec('composer install --optimize-autoloader --no-dev');
-//     // exec('npm install');
-//     Artisan::call('storage:link');
-//     // Artisan::call('migrate:fresh', ['--seed' => true]);
-//     // Artisan::call('config:cache');
-//     // Artisan::call('view:cache');
-//     // Artisan::call('route:cache');
-//     return 'done';
+    // exec('composer install --optimize-autoloader --no-dev');
+    // exec('npm install');
+    // Artisan::call('storage:link');
+    // Artisan::call('migrate:fresh', ['--seed' => true]);
+    // Artisan::call('config:cache');
+    // Artisan::call('view:cache');
+    // Artisan::call('route:cache');
+    // return 'done';
 // });
 
 Route::fallback(function () {
