@@ -3,14 +3,18 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
 use Illuminate\Http\Request;
 
-class Meta extends Model
+/**
+ * @method static page(mixed $page)
+ */
+class Meta extends LocalizableModel
 {
     use HasFactory;
 
     protected $guarded = [];
+
+    protected $localizable = ['content'];
 
     public $timestamps = false;
 
@@ -27,30 +31,9 @@ class Meta extends Model
             'content' => 'required|string|min:3',
             'content_ar' => 'required|string|min:3'
         ]);
-
-    }
-    /**
-     * Load English Meta from the database
-     *
-     * @return mixed
-     */
-    public static function loadEnglish()
-    {
-        return Meta::select('id', 'position', 'name', 'content', 'type', 'page')
-            ->get()
-            ->toArray();
     }
 
-
-    /**
-     * Load Arabic Meta from the database
-     *
-     * @return mixed
-     */
-    public static function loadArabic()
-    {
-        return Meta::select('id', 'position', 'name', 'content_ar as content', 'type', 'page')
-            ->get()
-            ->toArray();
+    public function scopePage($query, $page) {
+        return $page ? $query->where('page', $page) : $query;
     }
 }

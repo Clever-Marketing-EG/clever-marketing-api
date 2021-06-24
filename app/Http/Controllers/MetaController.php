@@ -11,23 +11,16 @@ class MetaController extends ResourcesController
     /**
      * Display a listing of the resource.
      *
+     * @param Request $request
      * @return JsonResponse
      */
-    public function index(): JsonResponse
+    public function index(Request $request): JsonResponse
     {
-        $meta = trans('meta');
-        $arr = [];
-
-        foreach ($meta as $metum) {
-            if(!array_key_exists($metum['page'], $arr)) {
-                $arr[$metum['page']] = [];
-            }
-            array_push($arr[$metum['page']], $metum);
-        }
+        $meta = Meta::page($request['page'])->get();
 
         return response()->json([
             'success' => true,
-            'data' => $arr
+            'data' => $meta
         ]);
     }
 
@@ -39,10 +32,10 @@ class MetaController extends ResourcesController
      */
     public function fullIndex(): JsonResponse
     {
-        $meta = Meta::all();
+        $meta = new Meta();
         return response()->json([
             'success' => true,
-            'data' => $meta
+            'data' => $meta->dashboard()
         ]);
     }
 
