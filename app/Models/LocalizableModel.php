@@ -2,6 +2,7 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
 
@@ -21,7 +22,15 @@ class LocalizableModel extends Model
      *
      * @var array
      */
-    protected $hiddenLocalizedAttributes = [];
+    protected static $hiddenLocalizedAttributes = [];
+
+
+    /**
+     * Localized attribute for localization
+     *
+     * @var array
+     */
+    protected static $localizedAttributes = [];
 
     /**
      * Whether or not to hide translated attributes e.g. name_en
@@ -52,11 +61,12 @@ class LocalizableModel extends Model
         foreach($this->localizable as $localizableAttribute) {
             if ($this->appendLocalizedAttributes) {
                 $this->appends[] = $localizableAttribute;
+                self::$localizedAttributes[] = $localizableAttribute;
             }
             if ($this->hideLocaleSpecificAttributes) {
                 foreach(config('app.supported_locales') as $locale) {
                     $this->hidden[] = $localizableAttribute.'_'.$locale;
-                    $this->hiddenLocalizedAttributes[] = $localizableAttribute.'_'.$locale;
+                    self::$hiddenLocalizedAttributes[] = $localizableAttribute.'_'.$locale;
                 }
             }
         }
@@ -102,7 +112,20 @@ class LocalizableModel extends Model
     }
 
 
-    public function dashboard() {
-        return parent::all()->makeVisible($this->hiddenLocalizedAttributes);
+    /**
+     *
+     *
+     * @return LocalizableModel[]|Collection
+     */
+    public static function allFull() {
+        return parent::all()->makeVisible(self::$hiddenLocalizedAttributes)
+            ->makeHidden(self::$localizedAttributes);
+    }
+
+
+    public function showFull(): LocalizableModel
+    {
+        return $this->makeVisible(self::$hiddenLocalizedAttributes)
+            ->makeHidden($this->localizable);
     }
 }

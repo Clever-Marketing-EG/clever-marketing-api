@@ -32,10 +32,10 @@ class MetaController extends ResourcesController
      */
     public function fullIndex(): JsonResponse
     {
-        $meta = new Meta();
+        $meta = Meta::allFull();
         return response()->json([
             'success' => true,
-            'data' => $meta->dashboard()
+            'data' => $meta
         ]);
     }
 
@@ -49,7 +49,7 @@ class MetaController extends ResourcesController
     {
         return response()->json([
             'success' => true,
-            'data' => $metum
+            'data' => $metum->showFull()
         ]);
     }
 
@@ -68,7 +68,7 @@ class MetaController extends ResourcesController
 
         return response()->json([
             'success' => true,
-            'data' => $metum
+            'data' => $metum->showFull()
         ]);
     }
 }

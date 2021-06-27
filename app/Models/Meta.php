@@ -5,9 +5,6 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Http\Request;
 
-/**
- * @method static page(mixed $page)
- */
 class Meta extends LocalizableModel
 {
     use HasFactory;
@@ -28,7 +25,7 @@ class Meta extends LocalizableModel
     public static function validate(Request $request): array
     {
         return $request->validate([
-            'content' => 'required|string|min:3',
+            'content_en' => 'required|string|min:3',
             'content_ar' => 'required|string|min:3'
         ]);
     }
