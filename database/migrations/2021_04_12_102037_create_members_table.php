@@ -24,7 +24,7 @@ class CreateMembersTable extends Migration
             $table->string('facebook');
             $table->string('linkedin');
             $table->string('image_url');
-            $table->enum('type', ['tech', 'marketing', 'designers'])->default('tech');
+            $table->enum('type', ['tech', 'marketing', 'designers', 'leader'])->default('tech');
 
         });
     }

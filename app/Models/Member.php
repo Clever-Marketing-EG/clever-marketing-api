@@ -67,7 +67,7 @@ class Member extends Model
             'facebook' => 'required|string|url|min:3',
             'linkedin' => 'required|string|url|min:3',
             'image_url' => 'required|url',
-            'type' => 'required|in:tech,marketing,designers'
+            'type' => 'required|in:tech,marketing,designers,leader'
         ]);
     }
 
